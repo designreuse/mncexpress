@@ -1,0 +1,129 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/resources/css/style.css">
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="/resources/js/script.js"></script>	
+</head>
+    
+
+<body class="sub">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<!-- 현재 메뉴에 CLASS="ON"추가 (1DEPTH만)--> 
+		<jsp:include page="header.jsp" />
+		
+		<!--side navigataion-->		
+		<nav id="side_nav">
+			<ul>
+				<li>
+					<a href="#airfreight" data-number="1">
+						<span class="cd-dot"></span>
+						<span class="cd-label">General Information about MNC</span>
+					</a>
+				</li>
+				<li>
+					<a href="#seafreight" data-number="2">
+						<span class="cd-dot"></span>
+						<span class="cd-label">Organization Chart</span>
+					</a>
+				</li>
+				<li>
+					<a href="#scm" data-number="3">
+						<span class="cd-dot"></span>
+						<span class="cd-label">Global Network</span>
+					</a>
+				</li>
+				<li>
+					<a href="#express" data-number="4">
+						<span class="cd-dot"></span>
+						<span class="cd-label">Location</span>
+					</a>
+				</li>				
+			</ul>
+			
+		</nav>
+		
+		<!--contents area-->
+		<div id="contents" >
+			<!--section1-->
+			<div class="section" id="airfreight" >
+				<h2><img src="/resources/images/icon/airfreight.png" alt="Airfreight">Airfreight service </h2>
+				<ul class="list">					
+					<li>In-land & door delivery service</li>   
+					<li>Customs clearance & warehousing</li>   
+					<li>Tracking & monitoring all shipment till the arrival </li>   
+					<li>Assignment of operation staff per each customer</li>   
+					<li>Dangerous Goods handling / UN Packing & Shipper’s declaration</li>   
+					<li>Project cargo & Oversized cargo handling</li>   
+					<li>Exhibition cargo </li>   
+					<li>3-PL service for major customer</li>   
+					<li>Warehouse management at airport</li>   
+				</ul> 			
+			</div>
+			<!--section2-->
+			<div class="section" id="seafreight">
+				<h2><img src="/resources/images/icon/seafreight.png" alt="Seafreight ">Seafreight  service </h2>
+				<ul class="list">	
+					<li>WFCL Service</li>   
+					<li>WLCL Service</li>   
+					<li>WSpecial container Service</li>   
+					<li>WProject cargo / Bulk  </li>   
+					<li>WIn-land trucking</li> 
+				</ul> 	
+			</div>		
+			<!--section3-->
+			<div class="section" id="scm">
+				<h2><img src="/resources/images/icon/scm.png" alt="scm "> Supply Chain Management </h2>
+				<p>
+					We’ve been providing service for Ships spares for more than 15 years and we earned our reputation by providing 
+					<br>the client, shipbuilder, agents and suppliers with customized service for each clients. 
+					<br>
+					<br>For Time-critical ships spares we are ready to act 24 hours 7days a week to meet your demand. 
+					<br>
+					<br>Equipped by professional staffs, our own SCM program and well organized bonded warehouse in Incheon Int’l Airport, 
+					<br>we’ll find you best logistic solution.  
+				</p>
+			</div>
+			<!--section4-->
+			<div class="section" id="express">
+				<h2><img src="/resources/images/icon/express.png" alt="express "> Express / Courier Service  </h2>
+				<ul class="list">
+					<li>U.S.A / China / Vietnam Express Service</li>
+					<li>Next day door delivery for all service division</li>
+					<li>Competitive rate & service with expert staff.</li>
+			</div>
+		</div>
+		
+		<!--footer area-->
+		<div id="footer">
+			<div class="footer_wrap">
+				<div class="pos_left">
+					<p class="located">357-2, Sang il-Building. Banghwa-3dong. Gangseo-gu Seoul Korea</p>
+					<p class="copyright">Copyright © 2015 AirFreight.com. All rights reserved.</p>
+				</div>
+				<div class="pos_right">
+					<a class="sendemail" href="mailto:someone@yoursite.com">MAIL TO WEBMASTER</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var target = "${target}";
+	if(target != "default") {
+		document.location.href="#"+target;
+	}
+</script>
+</html>

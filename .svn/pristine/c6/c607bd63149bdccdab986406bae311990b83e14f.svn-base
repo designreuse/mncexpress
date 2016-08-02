@@ -1,0 +1,146 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	<link rel="shortcut icon"  type="image/x-icon" href="<c:url value='/resources/images/favicon.ico'/>" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="<c:url value='/resources/js/script.js/'/>"></script>	
+</head>
+
+
+
+<!--sub 페이지 body에 "sub" 클래스 추가 --> 
+<body class="<spring:message code="body.sub.css"/>">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<!-- 현재 메뉴에 CLASS="ON"추가 (1DEPTH만)--> 
+		<jsp:include page="../header.jsp" />
+		
+		
+		<!--contents area-->
+		<div id="contents" >
+			<div class="cont_wrap">
+				<div class="visual">
+					<span>Company Overview</span>
+					<img src="<c:url value='/resources/images/header/visual_1.png/'/>" >				
+				</div>
+				<div class="divide">
+					<!--LEFT : side navigataion-->		
+					<jsp:include page="companySidebar.jsp" />
+					
+					<!--RIGHT: contents-->
+					<div class="right_cont">
+						<!--section3-->
+						<div class="section">
+							<h2><spring:message code="submenu.network"/></h2>
+							<div class="map">
+								<img src="<c:url value='/resources/images/company/map.png'/>" class="bg_map">
+								<div class="n_america">
+									<h3>North America</h3>
+									<ul>
+										<li>MNC L.A</li>
+										<li>MNC New York </li>
+										<li>Transgroup </li>
+										<li>TPL</li>
+										<li>BNX</li>
+										<li>CNC USA </li>
+									</ul>
+								</div>
+								<div class="c_america">
+									<h3>Central America</h3>
+									<ul>
+										<li>CNC Mexico</li>
+									</ul>
+								</div>
+								<div class="s_america">
+									<h3>South America</h3>
+									<ul>
+										<li>SUNTRANS BRASIL</li> 
+										<li>INFINITY</li> 
+										<li>CNC CHILE</li> 
+										<li>CNC PERU</li> 
+									</ul>
+								</div>
+								<div class="europe"> 
+									<h3>EUROPE </h3>
+									<ul>
+										<li>EUKO LOGIS</li> 
+										<li>WGL Poland</li> 
+										<li>NADO</li> 
+										<li>ABC LOGIS</li>   
+										<li>ALPHA GLOBAL</li>   
+										<li>AIF Europe</li>  
+									</ul>
+								</div>
+								<div class="china">
+									<h3>CHINA</h3>  
+									<ul>
+										<li>MNC China</li> 
+										<li>KING FREIGHT</li> 
+										<li>KORCHINA</li> 
+										<li>PANAKOR</li>   
+										<li>TRANSTAR</li>
+									</ul>
+								</div>
+								<div class="india">   
+									<h3>INDIA </h3>  
+									<ul>
+										<li>EAST-WEST FREIGHT</li> 
+										<li>GORDON</li> 
+										<li>PDP INT'L</li> 
+										<li>TRANS ASIA</li>   
+									</ul>
+								</div>
+								<div class="asia">
+									<h3> East/South ASIA </h3>  
+									<ul>
+										<li>SPL LOGISTICS</li> 
+										<li>KORNET</li> 
+										<li>BESCON</li> 
+										<li>ZIMMOAH</li>   
+										<li>STREAMLINE</li>   
+									</ul> 
+								</div>
+								<div class="australia">
+									<h3>Australia/ New Zealand </h3>  
+									<ul>
+										<li>PNL AUSTRAILIA</li> 
+										<li>DAMCO AUSTRAILIA</li> 
+									</ul> 
+								</div>
+							</div>
+						</div>
+						<!--//section3-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--footer area-->
+		<jsp:include page="../footer.jsp" />
+		
+	</div>
+	
+	
+	
+</body>
+<script type="text/javascript">
+	var target = "${target}";
+	if(target != "default") {
+		document.location.href="#"+target;
+	}
+</script>
+</html>

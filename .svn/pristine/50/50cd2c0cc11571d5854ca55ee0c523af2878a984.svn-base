@@ -1,0 +1,213 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	<link rel="shortcut icon"  type="image/x-icon" href="<c:url value='/resources/images/favicon.ico'/>" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="<c:url value='/resources/js/script.js/'/>"></script>	
+</head>
+
+<!--sub 페이지 body에 "sub" 클래스 추가 --> 
+<body class="<spring:message code="body.sub.css"/>">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<!-- 현재 메뉴에 CLASS="ON"추가 (1DEPTH만)--> 
+		<jsp:include page="../header.jsp" />
+		
+		
+		<!--contents area-->
+		<div id="contents" >
+			<div class="cont_wrap">
+				<div class="visual">
+					<span>Company Overview</span>
+					<img src="<c:url value='/resources/images/header/visual_1.png/'/>" >				
+				</div>
+				<div class="divide">
+					<!--LEFT : side navigataion-->		
+					<jsp:include page="companySidebar.jsp" />
+					
+					<!--RIGHT: contents-->
+					<div class="right_cont">
+						<!--section-->
+						<!-- <div class="section" id="location">
+							<h2><spring:message code="submenu.location"/></h2>
+							<div class="googlemap">
+								<iframe src="<c:url value='/view/googlemap/'/>" class="mapFrame"></iframe>
+							</div>
+						</div> -->
+						<!--//section-->
+						
+						<!--section-->
+						<div class="section">
+							<h2>Location</h2>							
+							<div class="location">
+								<div class="option">
+									<span class="default on"><spring:message code="overview.location.rough"/></span>
+									<span class="view_gmap"><spring:message code="overview.location.map"/></span>
+								</div>
+								<ul class="tab">
+									<li class="on"><spring:message code="overview.location.submenu.central"/></li>
+									<li><spring:message code="overview.location.submenu.incheon"/></li>
+									<li><spring:message code="overview.location.submenu.express"/></li>
+									<li><spring:message code="overview.location.submenu.LA"/></li>
+								</ul>
+								<ul class="tabcont">
+									<li class="on">
+										<div class="map_area">
+											<img src="<c:url value='/resources/images/company/location01.jpg'/>" >			
+											
+											<iframe src="<c:url value='/view/googlemap/'/>" class="iframemap" id="central"></iframe>
+										</div>
+										<div class="map_desc">
+											<table class="map_desc">
+												<colgroup>								
+													<col width="30%">
+													<col width="15%">
+													<col width="55%">							
+												</colgroup>								
+												<tbody>
+													<tr>
+														<th class="borderT borderB logo" rowspan="5"><img src="<c:url value='/resources/images/logo.png'/>" ></th>
+														<th class="borderT"><spring:message code='overview.location.submenu.location'/></th>
+														<td class="borderT"><spring:message code='googlemap.central.location'/></td>
+													</tr>
+													<tr>
+														<th><spring:message code='overview.location.submenu.contact'/></th>
+														<td>02)711-0870</td>
+													</tr>
+													<tr>
+														<th class="borderB"><spring:message code='overview.location.submenu.transport'/></th>
+														<td class="borderB">
+															<b>지하철</b> 6호선 2번출구에서 극동방송 방향으로 200M 로하스타워<br>
+														</td>
+													</tr>													
+												</tbody>					
+											</table>				    									
+										</div>
+									</li>
+									<li>
+										<div class="map_area">
+											<img src="<c:url value='/resources/images/company/location04.jpg'/>" >			
+												
+											<iframe src="<c:url value='/view/googlemap/'/>" class="iframemap" id="incheon"></iframe>						
+										</div>
+										<div class="map_desc">
+											<table class="map_desc">
+												<colgroup>								
+													<col width="30%">
+													<col width="15%">
+													<col width="55%">								
+												</colgroup>								
+												<tbody>
+													<tr>
+														<th class="borderT borderB logo" rowspan="5"><img src="<c:url value='/resources/images/logo.png'/>" ></th>
+														<th class="borderT"><spring:message code='overview.location.submenu.location'/></th>
+														<td class="borderT"><spring:message code='googlemap.incheon.location'/></td>
+													</tr>
+													<tr>
+														<th class="borderB"><spring:message code='overview.location.submenu.contact'/></th>
+														<td class="borderB">032)744-8861~2</td>
+													</tr>
+																										
+												</tbody>					
+											</table>				    									
+										</div>									
+									</li>
+									<li>
+										<div class="map_area">
+											<img src="<c:url value='/resources/images/company/location02.jpg'/>" >		
+											<iframe src="<c:url value='/view/googlemap/'/>" class="iframemap" id="express"></iframe>
+										</div>
+										<div class="map_desc">
+											<table class="map_desc">
+												<colgroup>								
+													<col width="30%">
+													<col width="15%">
+													<col width="55%">								
+												</colgroup>								
+												<tbody>
+													<tr>
+														<th class="borderT borderB logo" rowspan="5"><img src="<c:url value='/resources/images/logo.png'/>" ></th>
+														<th class="borderT"><spring:message code='overview.location.submenu.location'/></th>
+														<td class="borderT"><spring:message code='googlemap.express.location'/></td>
+													</tr>
+
+													<tr>
+														<th><spring:message code='overview.location.submenu.contact'/></th>
+														<td>02-322-8070</td>
+													</tr>
+													<tr>
+														<th class="borderB"><spring:message code='overview.location.submenu.transport'/></th>
+														<td class="borderB">
+															<b>지하철</b> 6호선 2번출구에서 극동방송 방향으로 200M 로하스타워<br>
+															<b>버스</b> 서강초등학교 정류장 : 751 마을버스 타고 테스트... 이런식으로 .. 
+														</td>
+													</tr>													
+												</tbody>					
+											</table>				    									
+										</div>
+									</li>
+									<li>
+										<div class="map_area">
+											<img src="<c:url value='/resources/images/company/location03.jpg'/>" >			
+											<iframe src="<c:url value='/view/googlemap/'/>" class="iframemap" id="LA"></iframe>	
+										</div>
+										<div class="map_desc">
+											<table class="map_desc">
+												<colgroup>								
+													<col width="30%">
+													<col width="15%">
+													<col width="55%">								
+												</colgroup>								
+												<tbody>
+													<tr>
+														<th class="borderT borderB logo" rowspan="5"><img src="<c:url value='/resources/images/logo.png'/>" ></th>
+														<th class="borderT"><spring:message code='overview.location.submenu.location'/></th>
+														<td class="borderT"><spring:message code='googlemap.LA.location'/></td>
+													</tr>
+													<tr>
+														<th><spring:message code='overview.location.submenu.contact'/></th>
+														<td>(213) 439-9001</td>
+													</tr>
+													<tr>
+														<th class="borderB"><spring:message code='overview.location.submenu.transport'/></th>
+														<td class="borderB">
+															<b>지하철</b> 6호선 2번출구에서 극동방송 방향으로 200M 로하스타워<br>
+															<b>버스</b> 서강초등학교 정류장 : 751 마을버스 타고 테스트... 이런식으로 .. 
+														</td>
+													</tr>													
+												</tbody>					
+											</table>				    									
+										</div>
+									</li>								
+								</ul>
+							</div>
+						</div>
+						<!--//section-->
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+		
+		
+		
+		<!--footer area-->
+		<jsp:include page="../footer.jsp" />
+		
+	</div>
+	
+	
+	
+</body>
+</html>

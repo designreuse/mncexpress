@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+
+<!--LEFT : side navigataion-->		
+<nav id="side_nav">
+	<h2><spring:message code="menu.overview"/></h2>
+	<img src="<c:url value='/resources/images/header/lnb_menu01.png/'/>" >
+	<ul>
+		<li id="submenu_info" class="on">
+			<a href="<c:url value='/view/companyOverview/companyInformation'/>">
+				<span class="cd-dot"></span>
+				<span class="cd-label"><spring:message code="submenu.info"/></span>
+			</a>
+		</li>
+		<li id="submenu_profile" class="on">
+			<a href="<c:url value='/view/companyOverview/companyProfile'/>">
+				<span class="cd-dot"></span>
+				<span class="cd-label"><spring:message code="submenu.profile"/></span>
+			</a>
+		</li>
+		<li id="submenu_chart">
+			<a href="<c:url value='/view/companyOverview/companyChart'/>">
+				<span class="cd-dot"></span>
+				<span class="cd-label"><spring:message code="submenu.chart"/></span>
+			</a>	
+		</li>
+		<li id="submenu_network">
+			<a href="<c:url value='/view/companyOverview/companyNetwork'/>">
+				<span class="cd-dot"></span>
+				<span class="cd-label"><spring:message code="submenu.network"/></span>
+			</a>
+		</li>
+		<li id="submenu_location">
+			<a href="<c:url value='/view/companyOverview/companyLocation'/>">
+				<span class="cd-dot"></span>
+				<span class="cd-label"><spring:message code="submenu.location"/></span>
+			</a>
+		</li>				
+	</ul>
+</nav>
+
+<script type="text/javascript">
+	/* 사이드 메뉴에 on클래스 지정 메소드 --> script.js */
+	menusetOn();
+</script>

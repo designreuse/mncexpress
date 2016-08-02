@@ -1,0 +1,81 @@
+main.contact= CONTACT
+main.scm= SCM-Supply chain<br/>management
+main.courier=Tracking for Courier
+
+menu.overview = COMPANY OVERVIEW
+menu.service = SERVICE & SOLUTIONS
+menu.contact = CONTACT
+menu.intranet = IntraNet
+
+submenu.info = General information
+submenu.chart = Organization Chart
+submenu.network = Global Network
+submenu.location = Location
+
+submenu.air = AirFreight
+submenu.sea = Seafreight
+submenu.manage = Supply Chain Management
+submenu.service = Express service
+
+submenu.biz = SCM - SHIP SPARES BIZ
+submenu.track = TRACK COURIER SHIPMENT
+
+index.rate = EXCHANGE RATE INFO
+index.USD = USD
+index.JPY = JPY(100\uffe5)
+index.CNY = CNY
+index.EUR = EUR
+index.VND = VND(100\u20ab)
+index.HKD = HKD
+
+overview.key.name = Company Name
+overview.key.ceo = C.E.O
+overview.key.establish = Establishment
+overview.key.capital = Capital(KRW)
+overview.key.employee = Employee
+  
+overview.info.name = MNC International Co., LTD
+overview.info.ceo = Park Min Gyu
+overview.info.establish = 1st. July, 2014
+overview.info.capital = 300 million
+overview.info.employee = 24 staffs
+
+googlemap.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=en
+googlemap.location=LOHAS Tower 48, Wausan-ro, Mapo-gu, Seoul, Korea (Zip Code:04068)
+
+service.air0 =Airfreight service
+service.air1 = Where speed is the main concern for our customer, we offer a responsive and flexible air freight service. Working with our airline agents and partners, we reliably cover all global air destinations with the addition of onward transport services when required.
+service.air2 = <li>Fast, reliable and efficient service</li><li>Door to airport</li><li>Airport to airport</li><li>Door to door</li><li>Customs clearance</li><li>Documentation service</li><li>Export packing</li><li>Dangerous goods handling </li><li>Warehousing </li>
+
+service.sea0 = Seafreight
+service.sea1 = Involving a freight forwarder means you will get the best solution for your business. For customers looking for reliable, cost effective shipping services, we can offer extensive solutions via its direct relationship with shipping lines and agents.<br/><br/>We offer a full range of containers, from 20ft to 40ft GPs to high cubes and open tops, tanks and flash bags.  
+service.sea2 = <li>Full and part container loads</li><li>Flat racks</li><li>Roll-on-roll-off</li><li>Door to port</li><li>Door to door</li><li>Port to port</li><li>Import/export documentation</li><li>Container stuffing</li><li>Export packing</li><li>Dangerous goods handling </li>
+
+service.supply0 = Supply Chain Management 
+service.supply1 = Providing service for Ships spares for more than 10 years, we earned our reputation by providing the client, shipbuilder, agents and suppliers with customized service for each clients.<br><br>For Time-critical ships spares, we are ready to serve 24 hours 7days a week to meet your demand.<br>Equipped by professional staffs, our own SCM program and well organized bonded warehouse in Incheon Int\u2019l Airport. 
+service.supply2 = Supply Chain Management<br/>Web based real time update<br/>Order management by QR cord<br/>Daily consolidation to main port<br/><br/><br/><strong>Incheon airport logistic center </strong><br/><em>F3-3, AMB warehouse, F, Free trade zone, 2091-95, Woonseo-dong </em><br/><em>Joong-gu, Incheon, Korea </em><br/><em>Tel: 82-32-744 0881 </em><br/><em>E-mail: spares@mnci.co.kr </em><br/><br/><br/><strong>Busan logistic center </strong><br/><em>#3216-2, Kangdong-dong, Kangseo-gu, Busan </em><br/><em>Tel: 82-51-941-4440</em><br/><em>E-mail: spares@mnci.co.kr </em>
+
+service.express0 = Express / Courier Service 
+service.express1 = MNC provide a full international and domestic courier service with daily collections arranged at times to suit you. We provide an easy-to-use online booking and tracking system, ensuring that you always know the whereabouts of your shipment.
+service.express2 = Express courier service to USA, Vietnam, China<br/>Own brokerage system for customs<br/>Branch office in LA and NY<br/>Daily pick-up & delivery<br/>Online booking and tracking system<br/>Competitive rate and service
+
+
+contact1 = Mr.K.Y.Lee
+contact2 = Ms.B.G.Park
+contact3 = Mr.H.G.Lee 
+contact4 = Mrs.J.H.Lee
+contact5 = Mr.K.B.Kim
+contact6 = Mrs.Celina J
+contact7 = Mr.D.S.Jung
+contact8 = Ms.J.S.Jae
+
+contact.service1 = Airfreight
+contact.service2 = Seafreight
+contact.service3 = Supply chain<br/>Management
+contact.service4 = Express / Courier<br/Service
+
+body.css =eng
+body.sub.css=sub eng
+
+
+

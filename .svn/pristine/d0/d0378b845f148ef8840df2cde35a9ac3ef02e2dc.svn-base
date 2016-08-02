@@ -1,0 +1,187 @@
+
+//header �ִϸ��̼�
+function animationHeader()
+{
+	//header MENU select motion Effect 
+	$('.gnb li').bind({
+		'hover': function(){
+			var $this = $(this); 
+			$this.find('.lnb').addClass('active');
+			$this.addClass('hover');
+			
+		},
+		'mouseout': function(){
+		   var $this = $(this); 
+			$this.find('.lnb').removeClass('active');	
+			$this.removeClass('hover');
+		},
+		'mouseover': function(){
+			var $this = $(this); 
+			$this.find('.lnb').addClass('active');
+			$this.addClass('hover');
+		}
+		
+		
+		
+	});	
+}	
+
+//side nav 
+function updateNavigation()
+{
+	
+	contentSections.each(function(){
+		$this = $(this);
+		var activeSection = $('#side_nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+		if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+			navigationItems.eq(activeSection).addClass('is-selected');
+		}else {
+			navigationItems.eq(activeSection).removeClass('is-selected');
+		}
+	});
+}
+
+//globalNetwort map effect
+function globalNetwort()
+{  
+	var map = $('.map'); 
+	var img_map = $('.map').find('.bg_map'); 
+	
+	map.find('.n_america').bind({	 //map_northamerica	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_northamerica.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_northamerica.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});
+	map.find('.c_america').bind({	 //map_southamerica	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_centralamerica.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_centralamerica.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});
+	map.find('.s_america').bind({	 //s_america	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_southamerica.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_southamerica.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});		
+	map.find('.europe').bind({		//europe
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_europe.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_europe.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});	
+	map.find('.china').bind({		//china	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_china.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_china.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});	 
+	map.find('.india').bind({		//india	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_india.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_india.png"); 
+			img_map.attr('src', effect_map );
+		}
+	}); 
+	map.find('.asia').bind({		//asia	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_asia.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_asia.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});   
+	map.find('.australia').bind({		//australia	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_australia.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_australia.png"); 
+			img_map.attr('src', effect_map );
+		}
+	}); 
+}	
+
+$(document).ready(function () { 
+	 animationHeader();	
+	 globalNetwort();
+	// $('.section').height(window.innerHeight);
+	
+	var contentSections = $('.section'),
+		navigationItems = $('#side_nav a');
+
+	updateNavigation();
+	$(window).on('scroll', function(){
+		updateNavigation();
+	});
+
+	//smooth scroll to the section
+	navigationItems.on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+    //smooth scroll to second section
+    $('.cd-scroll-down').on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+
+    //open-close navigation on touch devices
+    $('.touch .cd-nav-trigger').on('click', function(){
+    	$('.touch #side_nav').toggleClass('open');
+  
+    });
+    //close navigation on touch devices when selectin an elemnt from the list
+    $('.touch #side_nav a').on('click', function(){
+    	$('.touch #side_nav').removeClass('open');
+    });
+
+	function updateNavigation() {
+		contentSections.each(function(){
+			$this = $(this);
+			var activeSection = $('#side_nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+				navigationItems.eq(activeSection).addClass('is-selected');
+			}else {
+				navigationItems.eq(activeSection).removeClass('is-selected');
+			}
+		});
+	}
+
+	function smoothScroll(target) {
+        $('body,html').animate(
+        	{'scrollTop':target.offset().top},
+        	600
+        );
+	}
+});
+
+
+

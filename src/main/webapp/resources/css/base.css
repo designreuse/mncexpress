@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/*
+@font-face {
+font-family:NanumBarunGothic-Regular;
+src:url(../../font/NanumBarunGothic-Regular.eot); /* IE9 Compat Modes *
+src:url(../../font/NanumBarunGothic-Regular.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 *
+	url(../../font/NanumBarunGothic-Regular.woff) format('woff'), /* Modern Browsers *
+	url(../../font/NanumBarunGothic-Regular.ttf)  format('truetype'); /* Safari, Android, iOS *
+}
+
+@font-face {
+font-family:NanumBarunGothic-Bold;
+src:url(../../font/NanumBarunGothic-Bold.eot); /* IE9 Compat Modes *
+src:url(../../font/NanumBarunGothic-Bold.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 *
+	url(../../font/NanumBarunGothic-Bold.woff) format('woff'), /* Modern Browsers *
+	url(../../font/NanumBarunGothic-Bold.ttf)  format('truetype'); /* Safari, Android, iOS *
+}
+
+
+@font-face {
+font-family: NanumBarunGothic-Light;
+src: url(../../font/NanumBarunGothic-Light.eot);
+src: url(../../font/NanumBarunGothic-Light.eot?#iefix) format('embedded-opentype'),
+	 url(../../font/NanumBarunGothic-Light.woff) format('woff'),
+     url(../../font/NanumBarunGothic-Light.woff2) format('woff2'),
+	 url(../../font/NanumBarunGothic-Light.ttf) format('truetype');
+
+font-weight: normal;
+font-style: normal;
+}
+*/
+
+/* font: 나눔바른고딕  
+UltraLight 200
+Light 300
+Regular 400
+Bold 700 */
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+
+/* font-family: 'Roboto' Medium  
+Thin 100 
+Light 300 
+Normal 400 
+Medium 500 
+Bold 700 
+Ultra-Bold 900 */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,700,900);
+
+/*font-family: 'Roboto Condensed '*/
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+
+/* Basic Style START */
+html, body { height:100%; -webkit-text-size-adjust:none; }
+body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table { /* font:normal 12px/1.5 dotum,"����",Arial,AppleGothic,Sans-serif; */color:#666; }
+html, body, div, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, address, p, th, td, caption { margin:0; padding:0; }
+ol, ul, li { list-style:none; }
+img, fieldset { border:0 none; }
+input, select, textarea { vertical-align:middle; resize:none; position:relative; }
+input, textarea { -webkit-appearance:none; -webkit-border-radius:0; border-radius:0; box-shadow:0 !important;  }
+input[type="checkbox"] { -webkit-appearance:checkbox; }
+input[type="radio"] { -webkit-appearance:radio; -webkit-border-radius:10px; }
+button { border:0 none; background:transparent; cursor:pointer; }
+hr { display:none; }
+legend, .hide { width:0; height:0; visibility:hidden; font-size:0; line-height:0; position:absolute; top:0; left:0; overflow:hidden; }
+table caption { width:0; height:0; visibility:hidden; text-indent:-9999px; font-size:0; line-height:0; }
+table { border-collapse:collapse; border-spacing:0; }
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption { display:block; }
+a:link, a:visited, a:active, a:hover, a:focus { text-decoration:none; color:#666; }
+a:hover, a:focus { text-decoration:none !important; outline:none !important; }
+label {cursor:pointer;  }
+
+p{font-family: Nanum Barun Gothic ;  letter-spacing: -0.08px; font-weight:300;}
+a, span{font-family: Nanum Barun Gothic ;  letter-spacing: -0.08px}
+h4, h2{font-family: Nanum Barun Gothic ;  letter-spacing: -0.08px; font-weight:300;}
+input, textarea {font-family: Nanum Barun Gothic ; color:#1a1c27;  letter-spacing: -0.08px;   }
+
+

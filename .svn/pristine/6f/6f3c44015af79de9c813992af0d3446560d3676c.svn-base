@@ -1,0 +1,27 @@
+package com.mnc.express;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+@RequestMapping("view")
+public class ViewController {
+
+	@RequestMapping(value = "/companyOverview", method = RequestMethod.GET)
+	public String companyOverview() {
+		return "companyOverview";
+	}
+	
+	@RequestMapping(value = "/service", method = RequestMethod.GET)
+	public String service() {
+		return "service";
+	}
+	
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String contact() {
+		return "contact";
+	}
+	
+	
+}

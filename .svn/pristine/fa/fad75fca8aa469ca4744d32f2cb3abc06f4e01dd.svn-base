@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	<link rel="shortcut icon"  type="image/x-icon" href="<c:url value='/resources/images/favicon.ico'/>" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="<c:url value='/resources/js/script.js/'/>"></script>	
+</head>
+
+
+
+<!--sub 페이지 body에 "sub" 클래스 추가 --> 
+<body class="<spring:message code="body.sub.css"/>">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<!-- 현재 메뉴에 CLASS="ON"추가 (1DEPTH만)--> 
+		<jsp:include page="../header.jsp" />
+		
+		
+		<!--contents area-->
+		<div id="contents" >
+			<div class="cont_wrap">
+				<div class="visual">
+					<span>Company Overview</span>
+					<img src="<c:url value='/resources/images/header/visual_1.png/'/>" >				
+				</div>
+				<div class="divide">
+					<!--LEFT : side navigataion-->		
+					<jsp:include page="companySidebar.jsp" />
+					
+					<!--RIGHT: contents-->
+					<div class="right_cont">
+						<!--section-->
+						<div class="section" id="location">
+							<h2><spring:message code="submenu.location"/></h2>
+							<div class="googlemap">
+								<iframe src="<c:url value='/view/googlemap/'/>" class="mapFrame"></iframe>
+							</div>
+						</div>
+						<!--//section-->
+						
+						<!--section-->
+						<div class="section">
+							<h2>Location</h2>							
+							<div class="location">
+								<ul class="tab">
+									<li class="on">본사</li>
+									<li>인천물류센터</li>
+									<li>특송사업부</li>
+									<li>LA지사</li>
+								</ul>
+								<ul class="tabcont">
+									<li class="on"><img src="<c:url value='/resources/images/company/location01.jpg'/>" ></li>
+									<li><img src="<c:url value='/resources/images/company/location02.jpg'/>" ></li>
+									<li><img src="<c:url value='/resources/images/company/location03.jpg'/>" ></li>
+									<li><img src="<c:url value='/resources/images/company/location04.jpg'/>" ></li>								
+								</ul>
+							</div>
+						</div>
+						<!--//section-->
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+		
+		
+		<!--footer area-->
+		<jsp:include page="../footer.jsp" />
+		
+	</div>
+	
+	
+	
+</body>
+</html>

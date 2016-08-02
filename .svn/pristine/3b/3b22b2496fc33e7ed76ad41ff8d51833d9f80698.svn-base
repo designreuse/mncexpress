@@ -1,0 +1,83 @@
+main.title=한글
+
+menu.overview=회사소개
+menu.service = 사업영역
+menu.contact = 연락처
+
+submenu.info = 개요
+submenu.chart = 조직도
+submenu.network = 해외 네트워크
+submenu.location = 위치
+
+submenu.air = 항공운송
+submenu.sea = 해상운송
+submenu.manage = 선박부품사업
+submenu.service = 특송사업
+
+submenu.biz = SCM - 선박부품사업부
+submenu.track = 특송화물조회
+
+index.rate = 환율정보
+index.USD = 미국
+index.JPY = 일본(100엔)
+index.CNY = 중국
+index.EUR = 유럽연합
+index.VND = 베트남(100동)
+index.HKD = 홍콩
+
+overview.key.name = 회사명
+overview.key.ceo = 대표이사
+overview.key.establish = 설립일
+overview.key.capital = 자본금
+overview.key.employee = 임직원수
+
+overview.info.name = ㈜ 엠엔씨인터내쇼날
+overview.info.ceo = 박민규
+overview.info.establish = 2014년, 7월 01일 
+overview.info.capital = 3억
+overview.info.employee = 24명
+
+googlemap.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=ko
+
+service.air0 = 항공운송
+service.air1 = 항공 수출입 및 콘솔 서비스
+service.air2 = 통관, 내륙 운송 및 창고 보관 서비스
+service.air3 = 화물위치조회서비스
+service.air4 = 각 거래처별 담당 업무 직원 배치 
+service.air5 = 위험물 취급 / 포장 / 화주신고서
+service.air6 = 프로젝트 화물 / 중량 화물 운송
+service.air7 = 전시화물
+service.air8 = 3자 물류
+service.air9 = 인천공항 보세창고 운영
+
+service.sea0 = 해상운송
+service.sea1 = FCL Service
+service.sea2 = LCL Service
+service.sea3 = 특수컨테이너 
+service.sea4 = 중량화물 / 프로젝트화물 / 벌크화물 
+service.sea5 = 위험물 수출입 운송
+service.sea6 = <li>무역대행</li>
+service.sea7 = <li>통관 및 내륙 운송</li>
+
+service.supply0 = 선박부품운송사업부 
+service.supply1 = <ul class="list"><li>선박부품운송에 최적화된 서비스</li>
+service.supply2 = <li>각 거래처별 15년 이상 숙련된 담당업무직원의 맞춤서비스</li>
+service.supply3 = <li>회사 고유의 SCM 프로그램을 통한 실시간 오더의 입출고 확인</li>
+service.supply4 = <li>인천공항 및 부산CFS 보세창고 운영을 통한 다양한 물류 거점 확보</li></ul>
+service.supply5 = 
+
+service.express0 = 특송사업부
+service.express1 = <ul class="list"><li>미국 / 중국 / 베트남 행 당일/익일 배송 특송서비스<li>
+service.express2 = <li>합리적인 가격과 친절한 서비스<li></ul>
+service.express3 =
+
+contact1 = 이광열 부장
+contact2 = 박보금 차장
+contact3 = 이현길 부장
+contact4 = 이진희 차장
+contact5 = 김기봉 부장
+contact6 = 정선미 과장
+contact7 = 정대식 부장
+contact8 = 제진숙 과장
+
+body.css =kor

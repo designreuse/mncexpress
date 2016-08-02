@@ -1,0 +1,75 @@
+main.contact= CONTACT
+main.scm= SCM-Supply chain<br/>management
+main.courier=Tracking for Courier
+
+menu.overview = COMPANY OVERVIEW
+menu.service = SERVICE & SOLUTIONS
+menu.contact = CONTACT
+
+submenu.info = General information
+submenu.chart = Organization<br>Chart
+submenu.network = Global Network
+submenu.location = Location
+
+submenu.air = AirFreight
+submenu.sea = Seafreight
+submenu.manage = Supply Chain Management
+submenu.service = Express service
+
+submenu.biz = SCM - SHIP SPARES BIZ
+submenu.track = TRACK COURIER SHIPMENT
+
+index.rate = EXCHANGE RATE INFO
+index.USD = USD
+index.JPY = JPY(100\uffe5)
+index.CNY = CNY
+index.EUR = EUR
+index.VND = VND(100\u20ab)
+index.HKD = HKD
+
+overview.key.name = Company Name
+overview.key.ceo = C.E.O
+overview.key.establish = Establishment
+overview.key.capital = Capital(KRW)
+overview.key.employee = Employee
+  
+overview.info.name = MNC International Co., LTD
+overview.info.ceo = Park Min Gyu
+overview.info.establish = 1st. July, 2014
+overview.info.capital = 300 million
+overview.info.employee = 24 staffs
+
+googlemap.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=en
+googlemap.location=LOHAS Tower 48, Wausan-ro, Mapo-gu, Seoul, Korea (Zip Code:04068)
+
+service.air0 =Airfreight service
+service.air1 = <ul class="list"><li>In-land & door delivery service</li><li>Customs clearance & warehousing</li><li>Tracking & monitoring all shipment till the arrival</li><li>Assignment of operation staff per each customer</li><li>Dangerous Goods handling / UN Packing & Shipper\u2019s declaration</li><li>Project cargo & Oversized cargo handling</li><li><Exhibition cargo/li><li>3-PL service for major customer</li><li>Warehouse management at airpor</li></ul>
+
+service.sea0 = Seafreight
+service.sea1 = <ul class="list"><li>FCL Service</li><li>LCL Service</li><li>Special container Service</li><li>Project cargo / Bulk</li><li>In-land trucking</li></ul>
+
+service.supply0 = Supply Chain Management 
+service.supply1 = <p>We’ve been providing service for Ships spares for more than 15 years and we earned our reputation by providing the client, shipbuilder, agents and suppliers with customized service for each clients. <br/><br/>For Time-critical ships spares we are ready to act 24 hours 7days a week to meet your demand.<br/><br/>Equipped by professional staffs, our own SCM program and well organized bonded warehouse in Incheon Int’l Airport, we’ll find you best logistic solution.</p>
+
+service.express0 = Express / Courier Service 
+service.express1 = <ul class="list"><li>U.S.A / China / Vietnam Express Service</li><li>Next day door delivery for all service division</li><li>Competitive rate & service with expert staff.</li></ul>
+
+contact1 = Mr.K.Y.Lee
+contact2 = Ms.B.G.Park
+contact3 = Mr.H.G.Lee 
+contact4 = Mrs.J.H.Lee
+contact5 = Mr.K.B.Kim
+contact6 = Mrs.Celina J
+contact7 = Mr.D.S.Jung
+contact8 = Ms.J.S.Jae
+
+contact.service1 = Airfreight
+contact.service2 = Seafreight
+contact.service3 = Supply chain<br/>Management
+contact.service4 = Express / Courier<br/Service
+
+body.css =eng
+body.sub.css=sub eng
+
+
+

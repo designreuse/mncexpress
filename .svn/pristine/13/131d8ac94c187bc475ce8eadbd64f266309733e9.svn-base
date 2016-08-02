@@ -1,0 +1,107 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	<link rel="shortcut icon"  type="image/x-icon" href="<c:url value='/resources/images/favicon.ico'/>" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="<c:url value='/resources/js/script.js/'/>"></script>	
+</head>
+
+<script type="text/javascript">
+
+				
+	function fnPopup(order){
+		var popUrl = "";
+		switch(order){
+			case 1 : popUrl = "https://www.google.co.kr/maps/place/LOHAS Tower 48/@37.5480532,126.922031,17z/data=!4m2!3m1!1s0x357c98cf94a23fcf:0x29b12470a0512461";
+			break;
+			case 2 : 
+			break;
+			case 3 : popUrl = "https://www.google.co.kr/maps/place/상일빌딩/@37.5776311,126.807863,15z/data=!4m5!1m2!2m1!1z7ISc7Jq47IucIOqwleyEnOq1rCDquIjrgq3tmZTroZwgMjTqsIDquLggMTko67Cp7ZmU64-ZKeyDgeydvOu5jOuUqQ!3m1!1s0x357c9c82a4ef232f:0x472fea9c5b3205ed";
+			break;
+			case 4 : popUrl = "https://www.google.co.kr/maps/place/750+E+14th+St,+Los+Angeles,+CA+90021+미국/@34.031143,-118.2553,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2c7d33668b145:0x37587c664fd369d6";
+			break;
+		}
+
+		var popOption = "width=1000, height=600, resizable=no, scrollbars=no, status=no;";
+		window.open(popUrl,"",popOption);
+	} 
+
+</script>
+
+<!--sub 페이지 body에 "sub" 클래스 추가 --> 
+<body class="<spring:message code="body.sub.css"/>">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<!-- 현재 메뉴에 CLASS="ON"추가 (1DEPTH만)--> 
+		<jsp:include page="../header.jsp" />
+		
+		
+		<!--contents area-->
+		<div id="contents" >
+			<div class="cont_wrap">
+				<div class="visual">
+					<span>Company Overview</span>
+					<img src="<c:url value='/resources/images/header/visual_1.png/'/>" >				
+				</div>
+				<div class="divide">
+					<!--LEFT : side navigataion-->		
+					<jsp:include page="companySidebar.jsp" />
+					
+					<!--RIGHT: contents-->
+					<div class="right_cont">
+						<!--section-->
+						<!-- <div class="section" id="location">
+							<h2><spring:message code="submenu.location"/></h2>
+							<div class="googlemap">
+								<iframe src="<c:url value='/view/googlemap/'/>" class="mapFrame"></iframe>
+							</div>
+						</div> -->
+						<!--//section-->
+						
+						<!--section-->
+						<div class="section">
+							<h2>Location</h2>							
+							<div class="location">
+								<ul class="tab">
+									<li class="on">본사</li>
+									<li>인천물류센터</li>
+									<li>특송사업부</li>
+									<li>LA지사</li>
+								</ul>
+								<ul class="tabcont">
+									<li class="on"><a href="#none"><img src="<c:url value='/resources/images/company/location01.jpg'/>" onclick="javascript:fnPopup(1);"></a></li>
+									<li><a href="#none"><img src="<c:url value='/resources/images/company/location02.jpg'/>" onclick="javascript:fnPopup(2);"></a></li>
+									<li><a href="#none"><img src="<c:url value='/resources/images/company/location03.jpg'/>" onclick="javascript:fnPopup(3);"></a></li>
+									<li><a href="#none"><img src="<c:url value='/resources/images/company/location04.jpg'/>" onclick="javascript:fnPopup(4);"></a></li>								
+								</ul>
+							</div>
+						</div>
+						<!--//section-->
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+		
+		
+		
+		<!--footer area-->
+		<jsp:include page="../footer.jsp" />
+		
+	</div>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,43 @@
+작업하면서 알아낸 것.
+
+
+
+-페이지 이동 $(location).attr('href','src');
+
+-select박스 jquery는 change, javascript는 onchange
+
+-이벤트 바인딩 풀기 off()
+
+-문자열 다루기∑
+string.indexOf();
+string.substring();
+string.slpit('?');
+
+
+
+-현재 페이지 주소 알아내기.
+실행 - http://localhost:8088/login/login.do?key=value
+
+-javascript-
+
+location.href -> http://localhost:8088/login/login.do?key=value
+
+location.protocol -> http:
+location.host -> localhost:8088
+location.pathname -> /login/login.do
+location.search -> ?key=value
+
+-jquery-
+
+jQuery(location).attr('href') -> http://localhost:8088/login/login.do?key=value
+jQuery(location).attr('protocol') -> http:
+jQuery(location).attr('host') -> localhost:8088
+jQuery(location).attr('pathname') -> /login/login.do
+jQuery(location).attr('search')-> ?key=
+jQuery(location).attr('search')-> ?key=
+
+
+-sessionScope el 표현하기
+<c:out value="sessionScope.lang"/>
+
+-한국 선택시 나라가 미국으로 바꼈다가 한국으로 다시 바뀜.

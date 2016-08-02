@@ -1,0 +1,174 @@
+package com.mnc.express;
+
+import java.net.SocketTimeoutException;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.DomNode;
+import com.gargoylesoftware.htmlunit.html.DomNodeList;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+
+
+/**
+ * Handles requests for the application home page.
+ */
+@Controller
+public class HomeController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+//	크롤링할 환율표 주소(네이버환율표)
+	String writeUrl = "http://info.finance.naver.com/marketindex/exchangeList.nhn";
+	HtmlPage currPage;
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(Locale locale, Model model, HttpSession session, HttpServletRequest req) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+		// if(){
+
+		// }
+		locale = Locale.ENGLISH;
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+
+		setLanguage(req, session, locale);
+		return "index";
+	}
+	
+	public void setLanguage(HttpServletRequest req, HttpSession session, Locale locale){
+		
+		String lang = req.getParameter("lang");
+		System.out.println(lang+" - "+locale);
+		if(lang != null && lang.length() == 2){
+			session.setAttribute("lang",lang);
+		}
+	}
+	@RequestMapping(value="/crawring")
+	public ModelAndView crawring() {
+		
+//		map에 국가별 매매기준율을 값을 담아서 보냄
+		Map<String,String> exchangeMap = new HashMap<String,String>();
+		
+		try {
+					
+			System.out.println(writeUrl);
+
+			WebClient webClient = new WebClient(BrowserVersion.CHROME);
+			webClient.getOptions().setThrowExceptionOnScriptError(false);
+			webClient.waitForBackgroundJavaScript(5000);
+            currPage = webClient.getPage(writeUrl);
+			try{
+				
+				//currPage.
+				//DomNode d = currPage.asText("USD");
+				DomNodeList<DomNode> titList = currPage.querySelectorAll(".tit");
+				DomNodeList<DomNode> list = currPage.querySelectorAll("tbody tr");
+//				int[] nationNo = {0, 1, 2, 3, 4, 39};
+//				String[] nationTit = {"USD", "EUR", "JPY", "CNY", "HKD", "VND"};
+//				for(int i=0; i<nationNo.length; i++) {
+//					DomNode tr = list.get(nationNo[i]);
+//					DomNodeList<DomNode> children = tr.getChildNodes();
+//					String exchange = children.get(3).getTextContent().trim();
+//					exchangeMap.put(nationTit[i], exchange);
+//				}
+				
+				for(int i=0; i<titList.getLength(); i++) {
+					DomNode dom = titList.get(i);
+					String tit = dom.getChildNodes().get(0).getTextContent().trim();
+					int index = tit.indexOf("USD")!=-1? tit.indexOf("USD"):(
+							tit.indexOf("JPY")!=-1? tit.indexOf("JPY"):(
+							tit.indexOf("CNY")!=-1? tit.indexOf("CNY"):(
+							tit.indexOf("EUR")!=-1? tit.indexOf("EUR"):(
+							tit.indexOf("VND")!=-1? tit.indexOf("VND"):(
+							tit.indexOf("HKD")!=-1? tit.indexOf("HKD"):-1)))));
+					
+					if(	index != -1) {
+						DomNodeList<DomNode> children = list.get(i).getChildNodes();
+						String exchange = children.get(3).getTextContent().trim();
+						System.out.println(tit+" / "+exchange);
+						exchangeMap.put(tit.substring(index, index+3), exchange);
+					}
+//					if(	tit.indexOf("USD")!=-1 || tit.indexOf("JPY")!=-1 ||
+//						tit.indexOf("CNY")!=-1 || tit.indexOf("EUR")!=-1 ||
+//						tit.indexOf("VND")!=-1 || tit.indexOf("HKD")!=-1) {
+//						DomNodeList<DomNode> children = list.get(i).getChildNodes();
+//						String exchange = children.get(3).getTextContent().trim();
+//						System.out.println(tit+" / "+exchange);
+//						exchangeMap.put(tit, exchange);
+//					}
+				}
+				
+				
+				
+				
+
+//				동적인 코드로 작성했으나 크롤링하는데 시간이 너무 오래 걸려 위와 같이 하드코딩을 함.
+//				for(DomNode dom : list){
+//					
+//					DomNodeList<DomNode> children = dom.getChildNodes();
+//					String tit = children.get(0).getTextContent().trim();
+//					System.out.println(tit);
+					
+//					int i = tit.indexOf("USD")!=-1? tit.indexOf("USD"):(
+//							tit.indexOf("JPY")!=-1? tit.indexOf("JPY"):(
+//							tit.indexOf("CNY")!=-1? tit.indexOf("CNY"):(
+//							tit.indexOf("EUR")!=-1? tit.indexOf("EUR"):(
+//							tit.indexOf("VND")!=-1? tit.indexOf("VND"):(
+//							tit.indexOf("HKD")!=-1? tit.indexOf("HKD"):-1)))));
+//					
+//					if(	i!=-1 ) {
+//						String exchange = children.get(3).getTextContent().trim();
+//						exchangeMap.put(tit.substring(i,i+3), exchange);
+//					}
+//					if(	tit.indexOf("USD")!=-1 || tit.indexOf("JPY")!=-1 ||
+//							tit.indexOf("CNY")!=-1 || tit.indexOf("EUR")!=-1 ||
+//							tit.indexOf("VND")!=-1 || tit.indexOf("HKD")!=-1) {
+//						String exchange = children.get(3).getTextContent().trim();
+//						exchangeMap.put(tit, exchange);
+//					}
+//					currPage = webClient.getPage(writeUrl);
+//				}
+		
+			}catch(ElementNotFoundException e){
+				e.printStackTrace();
+			}catch(NoSuchMethodError e){
+				e.printStackTrace();
+			}
+
+			System.gc();
+			System.runFinalization();
+			System.gc();
+
+		} catch(SocketTimeoutException e){
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new ModelAndView(new MappingJacksonJsonView(), exchangeMap);
+	}
+	
+}

@@ -1,0 +1,108 @@
+main.contact = 고객지원(연락처)
+main.scm = SCM - 선박부품사업부
+main.courier = 특송화물조회
+
+menu.overview = 회사소개
+menu.service = 사업영역
+menu.contact = 고객지원
+menu.intranet = 인트라넷
+
+submenu.info = 기업일반정보
+submenu.chart = 조직도
+submenu.network = 해외 네트워크
+submenu.location = 오시는길
+
+submenu.air = 항공운송
+submenu.sea = 해상운송
+submenu.manage = 선박부품사업
+submenu.service = 특송사업
+
+submenu.biz = SCM - 선박부품사업부
+submenu.track = 특송사업부
+
+index.box2 = 특송화물배송조회
+index.rate = 환율정보
+index.USD = 미국
+index.JPY = 일본(100엔)
+index.CNY = 중국
+index.EUR = 유럽연합
+index.VND = 베트남(100동)
+index.HKD = 홍콩
+
+overview.key.name = 회사명
+overview.key.ceo = 대표이사
+overview.key.establish = 설립일
+overview.key.capital = 자본금
+overview.key.employee = 임직원수
+
+overview.info.name = ㈜ 엠엔씨인터내쇼날
+overview.info.ceo = 박민규
+overview.info.establish = 2014년 7월 
+overview.info.capital = 5억
+overview.info.employee = 24명
+
+overview.location.rough=약도보기
+overview.location.map=지도보기
+
+overview.location.submenu.central=본사
+overview.location.submenu.incheon=인천물류센터
+overview.location.submenu.express=특송사업부
+overview.location.submenu.LA=L.A.지사
+
+overview.location.submenu.location=위치
+overview.location.submenu.contact=연락처
+overview.location.submenu.transport=교통편
+
+googlemap.central.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=ko
+googlemap.central.location=서울시 마포구 와우산로 48, 1201호 (상수동) 로하스타워
+googlemap.central.Y_point=37.548517
+googlemap.central.X_point=126.923302
+
+googlemap.incheon.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=ko
+googlemap.incheon.location=인천광역시 중구 공항동로 296번길 69 자유무역단지 F동 AMB창고 F3-3 우)22379
+googlemap.incheon.Y_point=37.483933
+googlemap.incheon.X_point=126.479502
+
+googlemap.express.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=ko
+googlemap.express.location=서울시 강서구 금낭화로 24가길 19(방화동)상일빌딩 1,2층 우)07512
+googlemap.express.Y_point=37.578877
+googlemap.express.X_point=126.815182
+
+googlemap.LA.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=ko
+googlemap.LA.location=750 E. 14th St., 306 Los Angeles, CA. 90021 U.S.A
+googlemap.LA.Y_point=34.031125
+googlemap.LA.X_point=-118.253101
+
+service.air0 = 항공운송
+service.air1 = 다년간의 항공 운송 경험과 항공사와의 긴밀한 협조 및 신뢰를 바탕으로 고객의 소중한 자산을 목적지까지 안전하고 신속하게 배송하고 있습니다.<br/><br/>인천공항 자유무역단지 내에 위치한 종합물류센터를 HUB로 활용, 픽업부터 운송, 보관, 분류, 포장, 통관, 선적에 이르는 물류 과정을 실시간 모니터링함으로써 보다 빠르고 정확한 서비스를 제공하고 있습니다.
+service.air2 = <li style="background-position-y:top;">항공수출<br/><br/> 화물의 특성과 고객의 요구에 최적화된 스케쥴 및 항공운임 제공<br/> Global Network 를 통한 On-time Door delivery service 제공<br/> 위험물 취급을 위한 전문 인력 배치<br/><br/></li><li style="background-position-y:top;">항공수입<br/><br/> Global Network 를 통한 경쟁력 있는 운임과 서비스<br/> 미주, 유럽, 중국발 화물의 Consolidation 을 통한 경쟁력 있는 운임<br/> 수입통관, 보관 및 운송의 One-stop service<br/><br/></li><li style="background-position-y:top;">삼국간 물류<br/><br/> 중국 및 동남아발 유렵/미주행 삼국간 화물 취급<br/> 현지 파트너와의 긴밀한 업무 공조를 통한 화물별/국가별 특성에 따른 맞춤서비스<br/> Consolidation 을 통한 경쟁력 있는 항공 운임</li> 
+
+
+service.sea0 = 해상운송
+service.sea1 = 주요 선사와의 긴밀한 업무공조를 통한 안정적인 선복 및 경쟁력 있는 운임을 확보함으로써 고객 여러분의 소중한 화물을 도착지까지 안전하게 운송하고 있습니다.<br/><br/>수년간 다양한 아이템을 취급함으로써 축적된 노하우를 바탕으로 화물 특성에 맞는 운송 솔류션을 제공하고 있습니다. 
+service.sea2 = <li style="background-position-y:top;">해상 수출입<br/><br/>FCL / LCL / Special container (FR, OT, Flexi tank) 화물 운송<br/>고객별 전담 직원 배치, 선적 후 최종도착지까지 운송 루트별 Tracking service <br/>화물의 특성 및 고객의 요구에 최적화된 노선 및 경쟁력있는 운임 제공 <br/>Door delivery service <br/>Oversized / Bulk / Project 화물 운송 <br/>위험물 전담 직원 배치 <br/>제품포장, 보관, 통관, 내륙 운송, 선적 및 배송의 Total service<br/><br/></li><li style="background-position-y:top;">삼국간 물류<br/><br/>중국 내 1급 대리점과의 파트너쉽을 통한 안정적이고 경쟁력 있는 운임 및 선복 제공<br/>고객별 전담배치인력을 통한 업무 효율성 극대화 및 Irregularity 발생시 신속한 대응 <br/>실시간 모니터링을 통한 화물 추적 및 발생 가능한 문제에 대한 사전 방지 기능</li>
+
+service.supply0 = 선박부품운송
+service.supply1 = 정확성과 신속성이 요구되는 선박부품운송을 위한 숙련된 전문 인력 배치 및 자체 시스템 개발을 통해 세계 유수의 선주사 및 Ship management 고객사들로부터 신뢰를 쌓아 오고 있습니다.<br/><br/>인천공항 내 물류센터 및 부산 물류센터를 효율적으로 운영함으로써 보다 정확하고, 경쟁력 있는 서비스를 제공하고 있습니다. 
+service.supply2 = Supply Chain Management - Web 기반 실시간 Update 를 통한 오더의 물류 흐름 및 재고 파악 가능<br/>바코드 라벨에 의한 오더별 관리<br/>동산화재보험 가입<br/>전문보안업체 보안 시스템 가입<br/><br/><br/><strong>인천공항 물류 센터: </strong><br/><em>주소: 인천광역시 중구 운서동 2091-95 자유무역단지 F동 AMB 창고 F3-3</em><br/><em>전화: 032-744 0881</em><br/><em>E-mail: spares@mnci.co.kr</em><br/><br/><br/><strong>부산 물류 센터:</strong><br/><em>주소: 부산광역시 강서구 강동동 3216-2</em><br/><em>전화: 051-941-4440</em><br/><em>E-mail: spares@mnci.co.kr</em>
+
+service.express0 = 특송사업
+service.express1 = 현지 내 자체 개발 통관 시스템을 통한 보다 빠른 배송 시스템을 구축하고 이를 바탕으로 경쟁력 있는 운임을 제공하고 있습니다.<br/><br/>업무 및 배송 인력의 업무 교육 및 시스템 개발에 대한 지속적인 투자로 보다 앞선 특송화물서비스를 제공하기 위해 노력하고 있습니다. 
+service.express2 = 미국지역 특송 서비스를 위한 통관 license 획득<br/>각 목적국에서의 효율적인 서비스 제공을 위하여 지사 운용<br/>당일 order 수령 후 익일 최종 목적지 door delivery service 완료<br/>Web site 상에서 고객의 실시간 tracking 가능<br/>동종업계보다 비교우위의 가격 경쟁력 제공<br/><br/>주요서비스지역<br/>미국 : L.A, New Yok<br/>중국 : 중국 내 전지역 익일배송 원칙 (일부 내륙지역 제외)<br/>베트남 : Hanoi, Hochiminh
+
+contact1 = 이광열 부장
+contact2 = 박보금 차장
+contact3 = 이현길 부장
+contact4 = 이진희 차장
+contact5 = 김기봉 부장
+contact6 = 정선미 과장
+contact7 = 정대식 부장
+contact8 = 제진숙 과장
+
+contact.service1 = 항공사업부
+contact.service2 = 해운사업부
+contact.service3 = 선박부품운송
+contact.service4 = 특송사업부
+
+body.css =kor
+body.sub.css=sub kor

@@ -1,0 +1,31 @@
+//header 애니메이션
+function animationHeader()
+{
+	//header MENU select motion Effect 
+	$('.gnb li').bind({
+		'hover': function(){
+			var $this = $(this); 
+			$this.find('.lnb').addClass('active');
+			$this.addClass('on');
+			
+		},
+		'mouseout': function(){
+		   var $this = $(this); 
+			$this.find('.lnb').removeClass('active');	
+			$this.removeClass('on');
+		},
+		'mouseover': function(){
+			var $this = $(this); 
+			$this.find('.lnb').addClass('active');
+			$this.addClass('on');
+		}
+		
+		
+		
+	});	
+}	
+	
+$(document).ready(function () { 
+	 animationHeader();	
+	
+});

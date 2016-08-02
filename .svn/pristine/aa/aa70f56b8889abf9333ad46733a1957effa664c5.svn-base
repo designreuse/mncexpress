@@ -1,0 +1,116 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL information</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	<link rel="shortcut icon"  type="image/x-icon" href="<c:url value='/resources/images/favicon.ico'/>" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="<c:url value='/resources/js/script.js/'/>"></script>	
+</head>
+
+
+
+<!--sub 페이지 body에 "sub" 클래스 추가 --> 
+<body class="<spring:message code="body.sub.css"/>">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<!-- 현재 메뉴에 CLASS="ON"추가 (1DEPTH만)--> 
+		<jsp:include page="../header.jsp" />
+		
+		
+		<!--contents area-->
+		<div id="contents" >
+			<!--cont_wrap-->
+			<div class="cont_wrap">
+				
+				<!--visual-->
+				<div class="visual">
+					<span>Company Overview</span>
+					<img src="<c:url value='/resources/images/header/visual_1.png/'/>" >				
+				</div>
+				
+				
+				<div class="divide">
+					<!--LEFT : side navigataion-->		
+					<jsp:include page="companySidebar.jsp" />
+					
+					<!--RIGHT: contents-->
+					<div class="right_cont">
+					
+						<!--section1-->
+						<div class="section" id="about">
+							<h2>CEO 인사말</h2>
+							<div class="ceoment"">
+								<b>"고객의 성공과 미래 가치 실현을 위해 함께 고민하고 성장하는 기업"</b>
+								<p>
+									㈜엠엔씨인터내쇼날의 목표는 매출증대나 이익 극대화가 아닙니다. 고객의 미래 가치 실현과 성공을 위해 함께 고민하고 함께 뛰는, 
+									<br>단기간의 이익보다는 장기적인 안목과 밀도 높은 사고를 통해 다가오는 100년을 고민하는 미래지향기업입니다.
+ 									<br>나날이 복잡 다양해지는 경제환경에서 저렴한 운임과 서비스는 더 이상 저희들의 무기가 아닙니다.
+ 									<br> ㈜엠엔씨인터내쇼날의 서비스는 고객의 물류조력자로서 거래처 혹은 협력사 담당 개개인의 Needs를 충족하는 데서 멈추지 않습니다.
+ 									<br>오히려 고객만족으로부터 저희의 서비스는 시작됩니다. 
+ 									<br>주어진 환경에서 최선을 다함으로써 고객의 만족을 얻는 것으로부터 시작해서 고객의 성공을 위해 최적화된 물류 환경을 조성함으로써 
+ 									<br>그 결실을 함께 누리는 것이 저희들의 목표입니다.
+ 									<br>㈜엠엔씨인터내쇼날은 직원들의 신념과 가치를 존중하고 그 가치를 드높이기 위해 고민하는 기업입니다. 
+ 									<br>직원 스스로의 가치를 소중히 여기고 동료들의 의견을 존중하는 기업입니다.
+ 									<br>귀사의 성공파트너로서 ㈜엠엔씨인터내쇼날이 함께 뛰겠습니다.
+ 									<br>감사합니다.
+ 									<br>
+ 									<br>㈜엠엔씨인터내쇼날 임직원 일동
+								</p>
+							</div>
+							<h2><spring:message code="submenu.info"/></h2>
+							<table class="aboutmnc">
+								<colgroup>								
+									<col width="30%">
+									<col width="70%">																	
+								</colgroup>								
+								<tbody>
+									<tr>
+										<th class="borderT"><spring:message code="overview.key.name"/></th>
+										<td class="borderT"><spring:message code="overview.info.name"/></td>
+									</tr>
+									<tr>
+										<th><spring:message code="overview.key.ceo"/></th>
+										<td><spring:message code="overview.info.ceo"/></td>
+									</tr>
+									<tr>
+										<th><spring:message code="overview.key.establish"/></th>
+										<td><spring:message code="overview.info.establish"/></td>
+									</tr>
+									<tr>
+										<th><spring:message code="overview.key.capital"/></th>
+										<td><spring:message code="overview.info.capital"/></td>
+									</tr>
+									<tr>
+										<th class="borderB"><spring:message code="overview.key.employee"/></th>
+										<td class="borderB"><spring:message code="overview.info.employee"/></td>
+									</tr>
+								</tbody>					
+							</table>				
+						</div>
+						<!--//section1-->
+					</div>
+				</div>
+			</div>
+			<!--//cont_wrap-->
+		</div>
+		<!--//contents area-->		
+		
+				
+		<!--footer area-->
+		<jsp:include page="../footer.jsp" />
+	</div>
+	
+	
+	
+</body>
+</html>

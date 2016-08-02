@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="euc-kr">
+	<title>±¸±Û¸Ê API È°¿ëÇÏ±â</title>
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+		function initialize() {
+
+			/*
+				http://openapi.map.naver.com/api/geocode.php?key=f32441ebcd3cc9de474f8081df1e54e3&encoding=euc-kr&coord=LatLng&query=¼­¿ïÆ¯º°½Ã °­³²±¸ °­³²´ë·Î 456
+                À§¿Í°°ÀÌ ¸µÅ©¿¡¼­ µÚ¿¡ ÁÖ¼Ò¸¦ ÀûÀ¸¸é x,y °ªÀ» ±¸ÇÒ¼ö ÀÖ½À´Ï´Ù.
+			*/
+			var Y_point			= 35.87110100714382;		// Y ÁÂÇ¥
+			var X_point			= 128.60169690333006;		// X ÁÂÇ¥
+
+			var zoomLevel		= 16;						// ÁöµµÀÇ È®´ë ·¹º§ : ¼ýÀÚ°¡ Å¬¼ö·Ï È®´ëÁ¤µµ°¡ Å­
+
+			var markerTitle		= "À§Áî¼ÒÇÁÆ®";				// ÇöÀç À§Ä¡ ¸¶Ä¿¿¡ ¸¶¿ì½º¸¦ ¿À¹öÀ»¶§ ³ªÅ¸³ª´Â Á¤º¸
+			var markerMaxWidth	= 300;						// ¸¶Ä¿¸¦ Å¬¸¯ÇßÀ»¶§ ³ªÅ¸³ª´Â ¸»Ç³¼±ÀÇ ÃÖ´ë Å©±â
+
+			// ¸»Ç³¼± ³»¿ë
+			var contentString	= '<div>' +
+			'<h2>À§Áî¼ÒÇÁÆ®</h2>'+
+			'<p>À§Áî¼ÒÇÁÆ®´Â WEB Agency & SI ºÐ¾ß¿¡¼­ 10³â ÀÌ»óÀÇ Ç³ºÎÇÑ °æÇèÀ» º¸À¯ÇÑ<br />' +
+            'Àü¹® ÀÎ·ÂÀ¸·Î ±¸¼ºµÈ E-Business Àü¹® ±â¾÷ÀÔ´Ï´Ù.</p>' +
+			//'<a href="http://www.daegu.go.kr" target="_blank">http://www.daegu.go.kr</a>'+ //¸µÅ©µµ ³ÖÀ» ¼ö ÀÖÀ½
+			'</div>';
+
+			var myLatlng = new google.maps.LatLng(Y_point, X_point);
+			
+			//±¸±Û ¸Ê ¿É¼Ç ¼³Á¤
+			var mapOptions = { 
+				zoom : 16, //±âº» È®´ëÀ²
+				center : new google.maps.LatLng(37.5651, 126.98955), // Áöµµ Áß¾Ó À§Ä¡
+				scrollwheel : true, //¸¶¿ì½º ÈÙ·Î È®´ë Ãà¼Ò »ç¿ë ¿©ºÎ
+				mapTypeControl : true, //¸Ê Å¸ÀÔ ÄÁÆ®·Ñ »ç¿ë ¿©ºÎ					
+				zoomControl: true, // ÁÜ ÄÁÆ®·Ñ
+				scaleControl: true, // ÃàÃ´ ÄÁÆ®·Ñ
+				streetViewControl: true, // ½ºÆ®¸®Æ®ºä ÄÁÆ®·Ñ
+				mapTypeId: google.maps.MapTypeId.ROADMAP // Áöµµ À¯ÇüÀ» ÀÏ¹ÝÁöµµ·Î ¼³Á¤
+	  
+	  
+			};
+			
+			//±¸±Û ¸ÊÀ» »ç¿ëÇÒ Å¸°Ù 
+			var map = new google.maps.Map(document.getElementById('map_view'), mapOptions); 
+
+			 //¸¶Ä¿ ¼³Á¤
+			var marker = new google.maps.Marker({
+				position: myLatlng, //¸¶Ä¿ À§Ä¡
+				map: map,
+				title: markerTitle
+			});
+
+			var infowindow = new google.maps.InfoWindow(
+														{
+															content: contentString,
+															maxWidth: markerMaxWidth
+														}
+			);
+
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map, marker);
+			});
+		}
+	</script>
+</head>
+
+<body onload="initialize()" style="padding:0; margin:0;">
+	<div id="map_view" style="width:100%; height:560px;"></div>
+</body>
+</html>

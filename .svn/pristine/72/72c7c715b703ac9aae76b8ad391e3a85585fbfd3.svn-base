@@ -1,0 +1,226 @@
+
+//header �ִϸ��̼�
+function animationHeader()
+{
+	//header MENU select motion Effect 
+	$('.gnb li').bind({
+		'hover': function(){
+			var $this = $(this); 
+			$this.find('.lnb').addClass('active');
+			$this.addClass('hover');
+			
+		},
+		'mouseout': function(){
+		   var $this = $(this); 
+			$this.find('.lnb').removeClass('active');	
+			$this.removeClass('hover');
+		},
+		'mouseover': function(){
+			var $this = $(this); 
+			$this.find('.lnb').addClass('active');
+			$this.addClass('hover');
+		}
+		
+		
+		
+	});	
+}	
+
+//side nav 
+function updateNavigation()
+{
+	contentSections.each(function(){
+		$this = $(this);
+		//var activeSection = $('#side_nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+		var activeSection = getActiveSection();
+
+		if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+			navigationItems.eq(activeSection).addClass('is-selected');
+		}else {
+			navigationItems.eq(activeSection).removeClass('is-selected');
+		}
+	});
+}
+
+function getActiveSection(){
+	var paths = (location.pathname).split('/');
+	var pathName = paths[paths.length-1];
+	var upperPathName = paths[paths.length-2];
+	var activeSection = 0;
+
+	if( upperPathName == 'companyOverview'){
+		switch(pathName){
+			case 'companyInformation': 	activeSection = 0; break;
+			case 'companyChart': 		activeSection = 1; break;
+			case 'companyNetwork': 		activeSection = 2; break;
+			case 'companyLocation': 	activeSection = 3; break;
+
+		}
+	}else if( upperPathName =='service'){
+		switch(pathName){
+			case 'serviceAirFreight': 	activeSection = 0; break;
+			case 'serviceSeaFreight': 	activeSection = 1; break;
+			case 'serviceSupply': 		activeSection = 2; break;
+			case 'serviceExpress': 		activeSection = 3; break;
+
+		}
+	}
+	return activeSection;
+}
+
+//globalNetwort map effect
+function globalNetwort()
+{  
+	var map = $('.map'); 
+	var img_map = $('.map').find('.bg_map'); 
+	
+	map.find('.n_america').bind({	 //map_northamerica	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_northamerica.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_northamerica.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});
+	map.find('.c_america').bind({	 //map_southamerica	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_centralamerica.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_centralamerica.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});
+	map.find('.s_america').bind({	 //s_america	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_southamerica.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_southamerica.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});		
+	map.find('.europe').bind({		//europe
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_europe.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_europe.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});	
+	map.find('.china').bind({		//china	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_china.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_china.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});	 
+	map.find('.india').bind({		//india	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_india.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_india.png"); 
+			img_map.attr('src', effect_map );
+		}
+	}); 
+	map.find('.asia').bind({		//asia	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_asia.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_asia.png"); 
+			img_map.attr('src', effect_map );
+		}
+	});   
+	map.find('.australia').bind({		//australia	
+		'mouseout': function(){
+			var org = img_map.attr('src').replace("/map_australia.png","/map.png"); 	
+			img_map.attr('src', org );
+		},
+		'mouseover': function(){
+			var effect_map = img_map.attr('src').replace("/map.png","/map_australia.png"); 
+			img_map.attr('src', effect_map );
+		}
+	}); 
+}	
+
+function animationLnb(){
+	var currentTop = $('#side_nav').css('top'); console.log(currentTop);	
+	$(window).bind({		
+		'scroll':function(){				
+				var currentScroll = $(window).scrollTop();  console.log(currentScroll);				 
+				$('#side_nav').css('top' , parseInt(currentScroll) + parseInt(currentTop) );				
+		}			
+	});
+}
+
+$(document).ready(function () { 
+	 animationHeader();	
+	 globalNetwort();
+	 animationLnb();
+	// $('.section').height(window.innerHeight);
+	
+	var contentSections = $('.section'),
+		navigationItems = $('#side_nav a');
+
+	updateNavigation();
+	$(window).on('scroll', function(){
+		updateNavigation();
+	});
+
+	//smooth scroll to the section
+	navigationItems.on('click', function(event){
+        //event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+    //smooth scroll to second section
+    $('.cd-scroll-down').on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+
+    //open-close navigation on touch devices
+    $('.touch .cd-nav-trigger').on('click', function(){
+    	$('.touch #side_nav').toggleClass('open');
+  
+    });
+    //close navigation on touch devices when selectin an elemnt from the list
+    $('.touch #side_nav a').on('click', function(){
+    	$('.touch #side_nav').removeClass('open');
+    });
+
+	function updateNavigation() {
+		contentSections.each(function(){
+			$this = $(this);
+			//var activeSection = $('#side_nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+			var activeSection = getActiveSection();
+			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+				navigationItems.eq(activeSection).addClass('is-selected');
+			}else {
+				navigationItems.eq(activeSection).removeClass('is-selected');
+			}
+		});
+	}
+
+	function smoothScroll(target) {
+        $('body,html').animate(
+        	{'scrollTop':target.offset().top},
+        	600
+        );
+	}
+});
+
+
+

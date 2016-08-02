@@ -1,0 +1,88 @@
+main.title=abc
+
+menu.overview = COMPANY OVERVIEW
+menu.service = SERVICE & SOLUTIONS
+menu.contact = CONTACT
+
+submenu.info = General information
+submenu.chart = Organization<br>Chart
+submenu.network = Global Network
+submenu.location = Location
+
+submenu.air = AirFreight
+submenu.sea = Seafreight
+submenu.manage = Supply Chain Management
+submenu.service = Express service
+
+submenu.biz = SCM - SHIP SPARES BIZ
+submenu.track = TRACK COURIER SHIPMENT
+
+index.rate = EXCHANGE RATE INFO
+index.USD = USD
+index.JPY = JPY(100\uffe5)
+index.CNY = CNY
+index.EUR = EUR
+index.VND = VND(100\u20ab)
+index.HKD = HKD
+
+overview.key.name = Company Name
+overview.key.ceo = C.E.O
+overview.key.establish = Establishment
+overview.key.capital = Capital(KRW)
+overview.key.employee = Employee
+  
+overview.info.name = MNC International Co., LTD
+overview.info.ceo = Park Min Gyu
+overview.info.establish = 1st. July, 2014
+overview.info.capital = 300 million
+overview.info.employee = 24 staffs
+
+googlemap.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=en
+googlemap.location=LOHAS Tower 48, Wausan-ro, Mapo-gu, Seoul, Korea (Zip Code:04068)
+
+service.air0 = Airfreight service
+service.air1 = In-land & door delivery service
+service.air2 = Customs clearance & warehousing
+service.air3 = Tracking & monitoring all shipment till the arrival 
+service.air4 = Assignment of operation staff per each customer
+service.air5 = Dangerous Goods handling / UN Packing & Shipper\u2019s declaration
+service.air6 = Project cargo & Oversized cargo handling
+service.air7 = Exhibition cargo
+service.air8 = 3-PL service for major customer 
+service.air9 = Warehouse management at airpor
+
+service.sea0 = Seafreight
+service.sea1 = FCL Service
+service.sea2 = LCL Service
+service.sea3 = Special container Service
+service.sea4 = Project cargo / Bulk
+service.sea5 = In-land trucking
+service.sea6 = 
+service.sea7 = 
+
+service.supply0 = Supply Chain Management 
+service.supply1 = <p>We\u2019ve been providing service for Ships spares for more than 15 years and we earned our reputation by providing<br>
+service.supply2 = the client, shipbuilder, agents and suppliers with customized service for each clients. <br><br>
+service.supply3 = For Time-critical ships spares we are ready to act 24 hours 7days a week to meet your demand.<br><br> 
+service.supply4 = Equipped by professional staffs, our own SCM program and well organized bonded warehouse in Incheon Int\u2019l Airport,<br>
+service.supply5 = we\u2019ll find you best logistic solution.</p>
+
+service.express0 = Express / Courier Service 
+service.express1 = <ul class="list"><li>U.S.A / China / Vietnam Express Service</li>
+service.express2 = <li>Next day door delivery for all service division</li>
+service.express3 = <li>Competitive rate & service with expert staff.</li></ul>
+
+contact1 = Mr.K.Y.Lee
+contact2 = Ms.B.G.Park
+contact3 = Mr.H.G.Lee 
+contact4 = Mrs.J.H.Lee
+contact5 = Mr.K.B.Kim
+contact6 = Mrs.Celina J
+contact7 = Mr.D.S.Jung
+contact8 = Ms.J.S.Jae
+
+body.css =eng
+body.sub.css=sub eng
+
+
+

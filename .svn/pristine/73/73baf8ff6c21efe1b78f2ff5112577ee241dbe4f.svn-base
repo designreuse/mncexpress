@@ -1,0 +1,139 @@
+package com.mnc.express;
+
+import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping("view")
+public class ViewController {
+
+	@RequestMapping(value = "/companyOverview/{target}", method = RequestMethod.GET)
+	public ModelAndView companyOverview(@PathVariable String target, HttpServletRequest req, 
+			HttpSession session, Locale locale) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("companyOverview/"+target);
+
+		setLanguage(req, session, locale);
+		return modelAndView;
+	}
+	
+//	@RequestMapping(value = "/companyOverview/companyInformation", method = RequestMethod.GET)
+//	public ModelAndView companyInformation( HttpServletRequest req, 
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("companyOverview/companyInformation");
+//
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+//
+//	@RequestMapping(value = "/companyOverview/companyChart", method = RequestMethod.GET)
+//	public ModelAndView companyChart( HttpServletRequest req, 
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("companyOverview/companyChart");
+//
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+//
+//	@RequestMapping(value = "/companyOverview/companyNetwork", method = RequestMethod.GET)
+//	public ModelAndView companyNetwork( HttpServletRequest req, 
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("companyOverview/companyNetwork");
+//
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+//
+//	@RequestMapping(value = "/companyOverview/companyLocation", method = RequestMethod.GET)
+//	public ModelAndView companyLocation( HttpServletRequest req, 
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("companyOverview/companyLocation");
+//
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+	
+
+
+
+
+
+	 @RequestMapping(value = "/service/{target}", method = RequestMethod.GET)
+	 public ModelAndView service(@PathVariable String target, HttpServletRequest req,
+	 		HttpSession session, Locale locale) {
+		 ModelAndView modelAndView = new ModelAndView();
+		 modelAndView.setViewName("service/"+target);
+		
+		 setLanguage(req, session, locale);
+		 return modelAndView;
+	 }
+
+//	@RequestMapping(value = "/service/serviceAirFreight", method = RequestMethod.GET)
+//	public ModelAndView serviceAirFreight(HttpServletRequest req,
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("service/serviceAirFreight");
+//		
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+//
+//	@RequestMapping(value = "/service/serviceSeaFreight", method = RequestMethod.GET)
+//	public ModelAndView serviceSeaFreight(HttpServletRequest req,
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("service/serviceSeaFreight");
+//		
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+//	@RequestMapping(value = "/service/serviceSupply", method = RequestMethod.GET)
+//	public ModelAndView serviceSupply(HttpServletRequest req,
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("service/serviceSupply");
+//		
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+//	@RequestMapping(value = "/service/serviceExpress", method = RequestMethod.GET)
+//	public ModelAndView serviceExpress(HttpServletRequest req,
+//			HttpSession session, Locale locale) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.setViewName("service/serviceExpress");
+//		
+//		setLanguage(req, session, locale);
+//		return modelAndView;
+//	}
+	
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public ModelAndView contact(HttpServletRequest req, HttpSession session, Locale locale) {
+		setLanguage(req, session, locale);
+		return new ModelAndView("contact");
+	}
+	
+	@RequestMapping(value = "/googlemap", method = RequestMethod.GET)
+	public ModelAndView googlemap(HttpServletRequest req, HttpSession session) {
+		return new ModelAndView("googlemap");
+	}
+
+	public void setLanguage(HttpServletRequest req, HttpSession session, Locale locale){
+		
+		String lang = req.getParameter("lang");
+		if(lang != null && lang.length() == 2){
+			session.setAttribute("lang",lang);
+		}
+	}
+}

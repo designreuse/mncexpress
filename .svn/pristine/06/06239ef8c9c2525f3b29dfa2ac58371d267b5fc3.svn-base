@@ -1,0 +1,137 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<c:url value='/'/>resources/css/style.css">
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="<c:url value='/'/>resources/js/script.js"></script>	
+</head>
+    
+
+<body>
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<div id="header">
+			<div class="navbar">
+				<h1 class="logo"><a href="/"><img src="<c:url value='/'/>resources/images/logo.png"></a></h1>
+				<ul class="gnb">
+					<li class="on">
+						<a href="#">COMPANY OVERVIEW</a>
+						<ul class="lnb">
+							<li><a href="<c:url value='/'/>companyOverview.html">General information</a></li>
+							<li><a href="<c:url value='/'/>companyOverview.html">Organization<br>Chart</a></li>
+							<li><a href="<c:url value='/'/>companyOverview.html">Global Network</a></li>
+							<li><a href="<c:url value='/'/>companyOverview.html">Location</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">SERVICES & SOLUTIONS</a>
+						<ul class="lnb">
+							<li><a href="<c:url value='/'/>service.html">AirFreight</a></li>
+							<li><a href="<c:url value='/'/>service.html">Seafreight</a></li>
+							<li><a href="<c:url value='/'/>service.html">Supply Chain Management</a></li>
+							<li><a href="<c:url value='/'/>service.html">Express service</a></li>
+						</ul>
+					</li>
+					<li><a href="#">LOCATION</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li><a href="#">SCM - SHIP SPARES BIZ</a></li>
+					<li><a href="#">TRACK COURIER SHIPMENT</a></li>
+				</ul>
+			</div>			
+		</div>
+		
+		<!--contents area-->
+		<div id="contents">
+			<div class="main_visual">
+				<video autoplay="autoplay" muted="muted" preload="auto" loop="loop" poster="video.jpg">
+				  <source src="<c:url value='/'/>resources/images/main.mp4" type="video/mp4">
+				</video>				
+			</div>
+			<!--cargo area--> 
+			<div class="cargo">
+				<h2 class="tit_c">CARGO CAMPUS</h2>
+				<ul>
+					<li>
+						<a href="http://cargo.koreanair.com/kor/InterNet/campus/campus_terminal01.jsp?menu1=m1&menu2=m01-0" target="_blank">
+							<img src="<c:url value='/'/>resources/images/icon/airfreight.png" alt="Airfreight">
+							<span>Airfreight</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.hanjin.com/hanjin/CUP_HOM_1160.do?sessLocale=ko"  target="_blank">
+							<img src="<c:url value='/'/>resources/images/icon/seafreight.png" alt="seafreight">
+							<span>seafreight</span>
+						</a>
+					</li>
+				</ul>
+			</div>			
+			<!--exchange area--> 
+			<div class="exchange">
+				<h2 class="tit_c">EXCHANGE RATE INFO</h2>
+				<!-- <iframe marginwidth="0" marginheight="0" frameborder="0" width="210" scrolling="no" height="180" style="margin-top: 0;" src="https://okbfex.kbstar.com/quics?page=C019465&cc=b028364:b031677&bgcol=1&CusBus=0&KorEng=E&widthPx=250"></iframe> -->
+				<ul>
+					<li>
+						<img src="<c:url value='/'/>resources/images/nation/usd.png" alt="USD">
+						<label>USD</label>
+						<span>1,234,567</span>						
+					</li>       
+					<li>
+						<img src="<c:url value='/'/>resources/images/nation/jpy.png" alt="JPY">
+						<label>JPY</label>
+						<span>1,234,567</span>						
+					</li>
+					<li>
+						<img src="<c:url value='/'/>resources/images/nation/cny.png" alt="CNY">
+						<label>CNY</label>
+						<span>1,234,567</span>						
+					</li>
+					<li>
+						<img src="<c:url value='/'/>resources/images/nation/eur.png" alt="EUR">
+						<label>EUR</label>
+						<span>1,234,567</span>						
+					</li>
+					<li>
+						<img src="<c:url value='/'/>resources/images/nation/gbp.png" alt="GBP">
+						<label>GBP</label>
+						<span>1,234,567</span>						
+					</li>
+					<li>
+						<img src="<c:url value='/'/>resources/images/nation/kor.png" alt="KOR">
+						<label>KOR</label>
+						<span>1,234,567</span>						
+					</li>
+				</ul>
+				<div class="updateinfo">
+					<span>2016.02.05 12:34</span>
+					<a href="http://fx.keb.co.kr/FER1101C.web" class="more" title="더보기"  target="_blank"><span>+MORE</span></a>
+				</div>
+			</div>
+		</div>
+		
+		<!--footer area-->
+		<div id="footer">
+			<div class="footer_wrap">
+				<div class="pos_left">
+					<p class="located">357-2, Sang il-Building. Banghwa-3dong. Gangseo-gu Seoul Korea</p>
+					<p class="copyright">Copyright © 2015 AirFreight.com. All rights reserved.</p>
+				</div>
+				<div class="pos_right">
+					<a class="sendemail" href="mailto:someone@yoursite.com">MAIL TO WEBMASTER</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,129 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/style.css">
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="../resources/js/script.js"></script>	
+</head>
+    
+
+<body class="sub">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<!-- 현재 메뉴에 CLASS="ON"추가 (1DEPTH만)--> 
+		<jsp:include page="header.jsp" />
+		
+		<!--contents area-->
+		<div id="contents" >
+			<!--section1-->
+			<div class="section" id="airfreight" >
+				<h2>Contact</h2>
+				<table class="contact">
+					<colgroup>
+						<col width="20%">
+						<col width="20%">
+						<col width="20%">
+						<col width="20%">
+						<col width="20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Service</th>
+							<th>P.I.C</th>
+							<th>Telephone</th>
+							<th>Fax</th>
+							<th>E-mail</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th rowspan="2">Airfreight</th>
+							<td>이광열 부장</td>
+							<td>02-711-0874</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:kylee@mnci.co.kr">kylee@mnci.co.kr</a></td>
+						</tr>
+						<tr class="underline">
+							<td>박보금 차장</td>
+							<td>02-711-0835</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:bgpark@mnci.co.kr">bgpark@mnci.co.kr</a></td>
+						</tr>	
+						<tr>
+							<th rowspan="2">Seafreight</th>
+							<td>이현길  부장</td>
+							<td>02-711-0869</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:hklee@mnci.co.kr">hklee@mnci.co.kr</a></td>
+						</tr>
+						<tr class="underline">
+							<td>이진희  차장</td>
+							<td>02-711-0871</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:jhlee@mnci.co.kr">jhlee@mnci.co.kr</a></td>
+						</tr>	
+						<tr>
+							<th rowspan="2">Supply chain<br>Management</th>
+							<td>김기봉 부장</td>
+							<td>02-711-0873</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:kbkim@mnci.co.kr">kbkim@mnci.co.kr</a></td>
+						</tr>
+						<tr class="underline">
+							<td>정선미 과장</td>
+							<td>02-711-0872</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:celina@mnci.co.kr">celina@mnci.co.kr</a></td>
+						</tr>
+						<tr>
+							<th rowspan="2">Express / Courier<br>Service</th>
+							<td>정대식 부장</td>
+							<td>02-322-8070</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:kbkim@mnci.co.kr">dsjung@mnci.co.kr</a></td>
+						</tr>
+						<tr>
+							<td>제진숙  과장</td>
+							<td>02-322-8070</td>
+							<td>02-711-0889</td>
+							<td><a class="sendemail" href="mailto:celina@mnci.co.kr">jeajinsuk@mnci.co.kr</a></td>
+						</tr>
+					</tbody>	
+					
+												
+					
+				</table>
+							
+			</div>
+			
+		</div>
+		
+		<!--footer area-->
+		<div id="footer">
+			<div class="footer_wrap">
+				<div class="pos_left">
+					<p class="located">357-2, Sang il-Building. Banghwa-3dong. Gangseo-gu Seoul Korea</p>
+					<p class="copyright">Copyright © 2015 AirFreight.com. All rights reserved.</p>
+				</div>
+				<div class="pos_right">
+					<a class="sendemail" href="mailto:someone@yoursite.com">MAIL TO WEBMASTER</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</body>
+</html>

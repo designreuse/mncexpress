@@ -1,0 +1,69 @@
+/*layout*/
+
+#site-wrapper{    position: relative;    z-index: 0;    height: 100%;    background-color: #fff;}
+
+#main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999999;  
+	/*opacity:0.95;*/
+	background: rgba(255, 255, 255, 0.95);
+	
+	-webkit-transition: all 0.8s ease-out;
+    -moz-transition: all  0.8s ease-out;
+    -o-transition: all  0.8s ease-out;
+    transition: all  0.8s ease-out;
+	
+}
+#main-header.white{
+	background:rgba(26, 28, 39, 0.95); /*#1a1c27;*/
+}
+
+#main-header:hover{
+	
+	
+	/*-webkit-transition: box-shadow .2s ease-out;
+    -moz-transition: box-shadow .2s ease-out;
+    -o-transition: box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out;*/
+	
+	-webkit-transition: all 0.8s ease-out;
+    -moz-transition: all  0.8s ease-out;
+    -o-transition: all  0.8s ease-out;
+    transition: all  0.8s ease-out;
+	
+	
+	box-shadow: 0px 0px 5px rgba(0, 25, 51, 0.5);
+	background: rgba(255, 255, 255, 0.95) !important;
+	opacity:1 !important;
+	
+	
+	
+	
+}
+#site-content{	
+	
+	margin:0 auto;
+}
+
+#footer {       z-index: 99;    position: relative;  background: #222533;    height: 160px;    padding: 45px 60px;    box-sizing: border-box;}
+#footer .slogan {    float: left;    width: 300px;}
+#footer .slogan p {    color: #b0bec5;    line-height: 24px;    font-size: 14px;}
+#footer .slogan p em {    color: #009cff;    font-style: normal;}
+#footer .slogan p em a{    color: #009cff;    font-style: normal;}
+#footer .slogan p em a:hover{ color:#009cff; }
+#footer .located {	float: left;}
+#footer .located p{    color: #afbcc6;    font-size: 14px;    line-height: 24px;}
+#footer .located p em{ font-style: normal; font-family: Myriad Pro;   ;font-size: 14px;    line-height: 24px; }
+#footer ul {	    float: right; height:100px; }
+#footer ul li{	  font-family: Nanum Barun Gothic ;  letter-spacing: -0.08px; font-weight:300;  float: left;     padding-left:20px;    font-size: 13px;    color: #b0bec5;   	}
+#footer ul li:first-child{	 border:0;	}
+#footer ul li:first-child:before{	content:"";}
+#footer ul li:before{content:"|"; color:#313541; margin-right:20px;}
+#footer ul li a{ color:#b0bec5; }
+#footer ul li a:hover{ color:#009cff; }
+
+

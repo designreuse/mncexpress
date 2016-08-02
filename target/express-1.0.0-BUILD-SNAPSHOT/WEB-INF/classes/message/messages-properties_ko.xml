@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<properties>
+    <comment>messages-properties_ko</comment>
+    <entry key="main.title">MNC INTERNATIONAL</entry>                              <!-- 서버정보[local,dev,stage,real] -->
+ 
+    <entry key="menu.overview">메뉴 오버뷰</entry>                 <!-- 결과 코드 Key -->
+</properties>

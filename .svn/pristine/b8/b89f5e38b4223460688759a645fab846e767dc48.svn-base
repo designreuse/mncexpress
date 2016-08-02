@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<div id="header">
+	<div class="navbar">
+		<h1 class="logo"><a href="/"><img src="<c:url value="/"/>resources/images/logo.png"></a></h1>
+		<ul class="gnb">
+			<li>
+				<a href="<c:url value='/view/companyOverview/default'/>">COMPANY OVERVIEW</a>
+				<ul class="lnb">
+					<li><a href="<c:url value='/view/companyOverview/about'/>">General information</a></li>
+					<li><a href="<c:url value='/view/companyOverview/orgchart'/>">Organization<br>Chart</a></li>
+					<li><a href="<c:url value='/view/companyOverview/global'/>">Global Network</a></li>
+					<li><a href="<c:url value='/view/companyOverview/location'/>">Location</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="<c:url value='/view/service/default'/>">SERVICES & SOLUTIONS</a>
+				<ul class="lnb">
+					<li><a href="<c:url value='/view/service/airfreight'/>">AirFreight</a></li>
+					<li><a href="<c:url value='/view/service/seafreight'/>">Seafreight</a></li>
+					<li><a href="<c:url value='/view/service/scm'/>">Supply Chain Management</a></li>
+					<li><a href="<c:url value='/view/service/express'/>">Express service</a></li>
+				</ul>
+			</li>
+			<li><a href="<c:url value='/view/contact'/>">CONTACT</a></li>
+			<li><a href="#">SCM - SHIP SPARES BIZ</a></li>
+			<li><a href="#">TRACK COURIER SHIPMENT</a></li>
+		</ul>
+		<div class="language">	
+			<img src="<c:url value="/"/>resources/images/nation/kor.png" alt="KOR">					
+			<Select>
+				<option value="eng">ENG</option>
+				<option value="kor">KOR</option>						
+			</select>
+		</div>
+	</div>			
+</div>

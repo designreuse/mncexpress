@@ -1,0 +1,109 @@
+package com.mnc.express;
+
+import java.net.SocketTimeoutException;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.DomNode;
+import com.gargoylesoftware.htmlunit.html.DomNodeList;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+
+/**
+ * Handles requests for the application home page.
+ */
+@Controller
+public class HomeController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	String writeUrl = "http://info.finance.naver.com/marketindex/exchangeList.nhn";
+	HtmlPage currPage;
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(Locale locale, Model model) {
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "index";
+	}
+	
+	@RequestMapping(value = "/crawring", method = RequestMethod.GET)
+	public ModelAndView crawring() {
+		ModelAndView modelAndView = new ModelAndView();
+		
+		try {
+					
+			System.out.println(writeUrl);
+
+			WebClient webClient = new WebClient(BrowserVersion.CHROME);
+			webClient.getOptions().setThrowExceptionOnScriptError(false);
+			webClient.waitForBackgroundJavaScript(5000);
+            currPage = webClient.getPage(writeUrl);
+			try{
+				
+				DomNodeList<DomNode> list = currPage.querySelectorAll("tbody tr");
+				for(DomNode dom : list){
+					
+					DomNodeList<DomNode> children = dom.getChildNodes();
+					String tit = children.get(1).getTextContent().trim();
+					if(	tit.indexOf("USD") != -1 || tit.indexOf("JPY") != -1 ||
+						tit.indexOf("CNY") != -1 || tit.indexOf("EUR") != -1 ||
+						tit.indexOf("GBP") != -1) {
+						for(DomNode childrenDom : children) {
+							String trText = childrenDom.getTextContent().trim();
+							System.out.println(trText);
+						}
+						
+					}
+					
+					
+					
+//					String fileUrl = dom.getAttributes().getNamedItem("href").getNodeValue();
+//					String fileName = dom.getTextContent().trim();
+//					System.out.println("fileUrl : "+ fileUrl);
+//					System.out.println("fileName : " + fileName);
+					
+					currPage = webClient.getPage(writeUrl);
+				}
+		
+			}catch(ElementNotFoundException e){
+				e.printStackTrace();
+			}catch(NoSuchMethodError e){
+				e.printStackTrace();
+			}
+
+			System.gc();
+			System.runFinalization();
+			System.gc();
+
+		} catch(SocketTimeoutException e){
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	 return modelAndView;
+				
+	}
+	
+}

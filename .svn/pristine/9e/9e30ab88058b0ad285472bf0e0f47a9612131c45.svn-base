@@ -1,0 +1,114 @@
+main.contact= CONTACT
+main.scm= SCM-Supply chain<br/>management
+main.courier=Tracking for Courier
+
+menu.overview = COMPANY OVERVIEW
+menu.service = SERVICE & SOLUTIONS
+menu.contact = CONTACT
+menu.intranet = INTRANET
+
+submenu.info = General information
+submenu.profile = Profile
+submenu.chart = Organization Chart
+submenu.network = Global Network
+submenu.location = Location
+
+submenu.air = AirFreight
+submenu.sea = Seafreight
+submenu.manage = Supply Chain Management
+submenu.service = Express service
+
+submenu.biz = SCM - SHIP SPARES BIZ
+submenu.track = EXPRESS CARGO BIZ
+
+index.box2 = TRACKING
+index.rate = EXCHANGE RATE INFO
+index.USD = USD
+index.JPY = JPY(100\uffe5)
+index.CNY = CNY
+index.EUR = EUR
+index.VND = VND(100\u20ab)
+index.HKD = HKD
+
+overview.key.name = Company Name
+overview.key.ceo = C.E.O
+overview.key.establish = Establishment
+overview.key.capital = Capital(KRW)
+overview.key.employee = Employee
+  
+overview.info.name = MNC International Co., LTD
+overview.info.ceo = Park Min Gyu
+overview.info.establish = July, 2014
+overview.info.capital = 500 million
+overview.info.employee = 24 staffs
+overview.info.sayhello=<p>MNC INTERNATIONAL (MNC) is an international freight forwarding and logistics company founded in 2014 specializing in import, export and global freight and logistics services including: Ocean, Air, Land, Ship spares, Express/Courier service, Warehousing, NVOCC, Project and heavy lift cargo, and Customs brokerage services.<br><br>With a network of reliable agents, an experienced staff and our own warehouses in Incheon Airport and Pusan, MNC offers full-service customized freight solutions to clients worldwide.<br><br>Customer service is our first priority, led by our competitive rates and operational excellency. Being a professional freight forwarder is not enough at MNC. We believe in our clients as partners; their success is our success. Constant attention to expediting your shipment is just part of the routine at our offices.<br><br>We are proud of the loyalty of our employees, we listen to them, we value their individual dreams and we grow together.<br></p>
+overview.info.greetings=PROFILE
+
+overview.location.rough=ROUGH MAP
+overview.location.map=MAP
+
+overview.location.submenu.central=CENTRAL
+overview.location.submenu.incheon=INCHEON LOGISTICS CENTER
+overview.location.submenu.express=EXPRESS SERVICE
+overview.location.submenu.LA=L.A. BRANCH
+
+overview.location.submenu.location=LOCATION
+overview.location.submenu.contact=CONTACT
+overview.location.submenu.transport=TRANSPORT
+
+googlemap.central.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=en
+googlemap.central.location=LOHAS Tower 48, Wausan-ro, Mapo-gu, Seoul, Korea (Zip Code:04068)
+googlemap.central.Y_point=37.548517
+googlemap.central.X_point=126.923302
+
+googlemap.incheon.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=en
+googlemap.incheon.location=F3-3 AMB Warehouse, Trade Zone F,69, Gonghangdong-ro, 296 Beon-gil,Jung-gu, Incheon, Korea(Zip code 22379)
+googlemap.incheon.Y_point=37.483933
+googlemap.incheon.X_point=126.479502
+
+googlemap.express.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=en
+googlemap.express.location=1~2F, Sangil BIdg., 24 Gagil 19, Kumnanghwa-Ro Gangseo-Gu, Seoul, Korea (Zip code 07512)
+googlemap.express.Y_point=37.578877
+googlemap.express.X_point=126.815182
+
+googlemap.LA.src = https://maps.googleapis.com/maps/api/js?sensor=false&language=en
+googlemap.LA.location=750 E. 14th St., 306 Los Angeles, CA. 90021 U.S.A
+googlemap.LA.Y_point=34.031125
+googlemap.LA.X_point=-118.253101
+
+service.air0 =Airfreight service
+service.air1 = Where speed is the main concern for our customer, we offer a responsive and flexible air freight service. Working with our airline agents and partners, we reliably cover all global air destinations with the addition of onward transport services when required.
+service.air2 = <li>Fast, reliable and efficient service</li><li>Door to airport</li><li>Airport to airport</li><li>Door to door</li><li>Customs clearance</li><li>Documentation service</li><li>Export packing</li><li>Dangerous goods handling </li><li>Warehousing </li>
+
+service.sea0 = Seafreight
+service.sea1 = Involving a freight forwarder means you will get the best solution for your business. For customers looking for reliable, cost effective shipping services, we can offer extensive solutions via its direct relationship with shipping lines and agents.<br/><br/>We offer a full range of containers, from 20ft to 40ft GPs to high cubes and open tops, tanks and flash bags.  
+service.sea2 = <li>Full and part container loads</li><li>Flat racks</li><li>Roll-on-roll-off</li><li>Door to port</li><li>Door to door</li><li>Port to port</li><li>Import/export documentation</li><li>Container stuffing</li><li>Export packing</li><li>Dangerous goods handling </li>
+
+service.supply0 = Supply Chain Management 
+service.supply1 = Providing service for Ships spares for more than 10 years, we earned our reputation by providing the client, shipbuilder, agents and suppliers with customized service for each clients.<br><br>For Time-critical ships spares, we are ready to serve 24 hours 7days a week to meet your demand.<br>Equipped by professional staffs, our own SCM program and well organized bonded warehouse in Incheon Int\u2019l Airport. 
+service.supply2 = Supply Chain Management<br/>Web based real time update<br/>Order management by QR cord<br/>Daily consolidation to main port<br/><br/><br/><strong>Incheon airport logistic center </strong><br/><em>F3-3, AMB warehouse, F, Free trade zone, 2091-95, Woonseo-dong </em><br/><em>Joong-gu, Incheon, Korea </em><br/><em>Tel: 82-32-744 0881 </em><br/><em>E-mail: spares@mnci.co.kr </em><br/><br/><br/><strong>Busan logistic center </strong><br/><em>#3216-2, Kangdong-dong, Kangseo-gu, Busan </em><br/><em>Tel: 82-51-941-4440</em><br/><em>E-mail: spares@mnci.co.kr </em>
+
+service.express0 = Express / Courier Service 
+service.express1 = MNC provide a full international and domestic courier service with daily collections arranged at times to suit you. We provide an easy-to-use online booking and tracking system, ensuring that you always know the whereabouts of your shipment.
+service.express2 = Express courier service to USA, Vietnam, China<br/>Own brokerage system for customs<br/>Branch office in LA and NY<br/>Daily pick-up & delivery<br/>Online booking and tracking system<br/>Competitive rate and service
+
+
+contact1 = Mr.K.Y.Lee
+contact2 = Ms.B.G.Park
+contact3 = Mr.H.K.Lee
+contact4 = Mrs.J.H.Lee
+contact5 = Mr.K.B.Kim
+contact6 = Mrs.Celina J
+contact7 = Mr.D.S.Jung
+contact8 = Ms.J.S.Jae
+
+contact.service1 = Airfreight
+contact.service2 = Seafreight
+contact.service3 = Supply chain<br/>Management
+contact.service4 = Express / Courier<br/Service
+
+body.css =eng
+body.sub.css=sub eng
+
+
+

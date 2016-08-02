@@ -1,0 +1,125 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>MNC INTERNATIONAL </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>" />
+<%-- 	<link rel="stylesheet" type="text/css" href="<c:url value=""/>/resources/css/style.css"> --%>
+	<!--[if lt IE 9]><script src="../../js/www/library_iehtml5css3.js"></script><![endif]-->
+	<link rel="shortcut icon"  type="image/x-icon" href="<c:url value='/resources/images/favicon.ico'/>" />
+	
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="<c:url value='/resources/js/script.js/'/>"></script>	
+</head>
+
+<script type="text/javascript">
+	/* 환율정보를 받아옴 */
+	$.getJSON("/crawring", {
+	},function (data) {
+		setExchange(data);
+	});
+	
+	/* 받아온 환율 값을 적용하는 함수 */
+	function setExchange(data) {
+		var keys = Object.keys(data);
+		for(var i in keys) {
+			$("#exchange_"+keys[i]).text(data[keys[i]]);
+		}
+	}
+</script>
+
+<body class="<spring:message code="body.css"/>">
+	<div class="wrap">
+		<!--GNB HEADER -->
+		<jsp:include page="header.jsp" />
+		
+		<!--contents area-->
+		<div id="contents">
+			<div class="cont_wrap">
+			
+				<!-- main visual slideshow -->
+				<div id="slideshow">	
+					<em>Your best partner <br><b>for Max-success</b></em>
+					<ul class="slide_image">
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/slide01.jpg"'/>"  alt=""></a></li>
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/slide02.jpg"'/>"  alt=""></a></li>
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/slide03.jpg"'/>"  alt=""></a></li>						
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/slide04.jpg"'/>"  alt=""></a></li>						
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/slide05.jpg"'/>"  alt=""></a></li>						
+					</ul>
+					<ul class="thum">
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/thum_on.png"'/>" alt="" width="15" height="15"></a></li>
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/thum.png"'/>" alt="" width="15" height="15"></a></li>
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/thum.png"'/>" alt="" width="15" height="15"></a></li>
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/thum.png"'/>" alt="" width="15" height="15"></a></li>
+						<li><a href="#"><img src="<c:url value='/resources/images/slide/thum.png"'/>" alt="" width="15" height="15"></a></li>
+					</ul>
+				</div>
+				
+				
+				
+				<!--box1-->
+				<div class="boxstyle box1">
+					<h2>SCM Log-in</h2> 
+					<span>Supply Chain Management</span>
+					<p class="btn_go"><a href="http://scm.mnci.co.kr"  target="_blank"><img src="<c:url value='/resources/images/icon/btn_go3.png"'/>" alt="바로가기"></a></p>
+				</div>
+				
+				<!--box2-->
+				<div class="boxstyle box2">
+					<h2>TRACKING</h2> 
+					<span>Express/Courier service</span>
+					<p class="btn_go"><a href="http://mitexpress.com" target="_blank"><img src="<c:url value='/resources/images/icon/btn_go3.png"'/>" alt="바로가기"></a></p>
+				</div>
+				
+				<!--box3-->
+				<div class="boxstyle box3 air">
+					<h2>AIR FREIGHT</h2>
+					<span>cargo campus</span>
+					<p class="btn_go"><a href="<c:url value='/view/service/serviceAirFreight'/>"><img src="<c:url value='/resources/images/icon/btn_go.png"'/>" alt="바로가기"></a></p>
+				</div>
+				<div class="boxstyle box3 sea">
+					<h2>SEA FREIGHT</h2>
+					<span>cargo campus</span>
+					<p class="btn_go"><a href="<c:url value='/view/service/serviceSeaFreight'/>"><img src="<c:url value='/resources/images/icon/btn_go.png"'/>" alt="바로가기"></a></p>
+				</div>
+				
+				<!--box4-->
+				<div class="boxstyle box4">
+					<h2>LOCATION</h2>
+					<span>view map</span>
+					<p class="btn_go"><a href="<c:url value='/view/companyOverview/companyLocation'/>"><img src="<c:url value='/resources/images/icon/btn_go3.png"'/>" alt="바로가기"></a></p>
+				</div>
+				
+				<!--box5-->
+				<div class="boxstyle box5">
+					<h2>CONTACT US</h2>
+					<em><img src="<c:url value='/resources/images/icon/tel.png"'/>" alt=""> 82-2-711-0870</em>
+				</div>	
+			</div>
+			
+		</div>
+		
+		<!--footer area-->
+		<jsp:include page="footer.jsp" />
+		
+	</div>
+	
+	
+	<script type="text/javascript">	
+	var date = new Date();	
+	var now = date.getFullYear()+'.'+(date.getMonth()+1)+'.'+date.getDate()+' '
+			+date.getHours()+':'+date.getMinutes();
+	$('#time').text(now);
+	</script>
+	
+	
+</body>
+</html>
